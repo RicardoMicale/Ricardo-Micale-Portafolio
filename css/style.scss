@@ -13,12 +13,12 @@ $detalles2: #D8D8D8;
     box-sizing: border-box;
     font-family: $fuentes;
     scroll-behavior: smooth;
+    transition: background .2s;
 }
 
 body {
     background-color: $primary;
     overflow-x: hidden;
-    transition: background .2s;
 }
 
 span {
@@ -295,6 +295,14 @@ nav {
     align-items: center;
     flex-direction: column;
 
+    p {
+        font-size: 14px;
+        color: $secondary;
+        margin-bottom: .8rem;
+        width: 50vw;
+        text-align: center;
+    }
+
     h2 {
         
         font-size: 1.6rem;
@@ -368,6 +376,10 @@ body.light-mode{
                 background-color: $primary;
             }
         }
+    }
+
+    .tag p {
+        color: $detalles1;
     }
     //Pagina de proyectos
 }

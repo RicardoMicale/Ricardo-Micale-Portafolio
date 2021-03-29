@@ -5,13 +5,13 @@
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  -webkit-transition: background .2s;
+  transition: background .2s;
 }
 
 body {
   background-color: #191919;
   overflow-x: hidden;
-  -webkit-transition: background .2s;
-  transition: background .2s;
 }
 
 span {
@@ -392,6 +392,14 @@ nav .links li {
           flex-direction: column;
 }
 
+.tag p {
+  font-size: 14px;
+  color: #F2F2F2;
+  margin-bottom: .8rem;
+  width: 50vw;
+  text-align: center;
+}
+
 .tag h2 {
   font-size: 1.6rem;
   margin-block: 3rem;
@@ -473,5 +481,9 @@ body.light-mode #buttons label {
 
 body.light-mode #buttons label .ball {
   background-color: #191919;
+}
+
+body.light-mode .tag p {
+  color: #090909;
 }
 /*# sourceMappingURL=style.css.map */
