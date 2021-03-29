@@ -160,6 +160,10 @@ nav {
 }
 //Inicio, titulos y botones
 
+.enlaces i {
+    font-size: 2rem;
+}
+
 .inicio {
     display: flex;
     justify-content: center;
@@ -200,9 +204,7 @@ nav {
                 list-style: none;
                 margin-inline: 1rem;
 
-                a i {
-                    font-size: 2rem;
-                }
+                
             }
         }
 
@@ -326,6 +328,115 @@ nav {
     }
 }
 
+//Proyectos
+
+#proyectos {
+
+    .tarjeta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10rem;
+
+        img {
+            max-width: 90vw;
+            border-bottom: solid 2rem $acento;
+        }
+
+        .info {
+            background-color: $secondary;
+            max-width: 90vw;
+            padding: 1.6rem .8rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+
+            h3 {
+                font-size: 1.8rem;
+                color: $primary;
+            }
+
+            p {
+                color: $primary;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                padding-left: 1.2rem;
+            }
+
+            
+        }
+        //botones al repositorio de github y al proyecto
+        .repositorios {
+            a {
+                margin-top: 2rem;
+                background-color: $acento;
+                font-family: $fuentes;
+                font-size: 1.4rem;
+                text-decoration: none;
+                color: $secondary;
+                padding: .8rem 3rem;
+                border-radius: 50rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    margin-right: .8rem;
+                }
+                
+            }
+        }
+        //logos de los lenguajes y demas que se uso para hacer el proyecto
+        .tecnologias {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img {
+                margin: 0;
+                width: 3rem;
+                height: 3rem;
+                border: none;
+            }
+        }
+    }
+
+    .btn-contactame {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 10rem;
+        margin-bottom: 0;
+
+        h3 {
+            color: $secondary;
+            font-size: 1.4rem;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: $acento;
+            padding: .8rem 3rem;
+            border-radius: 500px;
+            color: $secondary;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+
+    .tarjeta-final {
+        margin-bottom: 5rem;
+    }
+
+    .tag {
+        margin-block: 0;
+        padding-block: 0;
+    }
+}
+
+//Acerca de y habilidades
 
 
 //Modo noche - Modo dia
@@ -382,4 +493,31 @@ body.light-mode{
         color: $detalles1;
     }
     //Pagina de proyectos
+    
+    #proyectos {
+
+        .tarjeta {
+
+            .info {
+                background-color: $primary;
+
+                h3, p {
+                    color: $secondary;
+                }
+            }
+
+            .repositorios {
+
+                i {
+                    color: $secondary;
+                }
+            }
+        }
+
+        .btn-contactame {
+            h3 {
+                color: $primary;
+            }
+        }
+    }
 }

@@ -208,6 +208,10 @@ nav .links li {
   }
 }
 
+.enlaces i {
+  font-size: 2rem;
+}
+
 .inicio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,10 +277,6 @@ nav .links li {
 .inicio .botones ul li {
   list-style: none;
   margin-inline: 1rem;
-}
-
-.inicio .botones ul li a i {
-  font-size: 2rem;
 }
 
 .inicio .botones a {
@@ -434,6 +434,135 @@ nav .links li {
   }
 }
 
+#proyectos .tarjeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10rem;
+}
+
+#proyectos .tarjeta img {
+  max-width: 90vw;
+  border-bottom: solid 2rem #D94A24;
+}
+
+#proyectos .tarjeta .info {
+  background-color: #F2F2F2;
+  max-width: 90vw;
+  padding: 1.6rem .8rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+#proyectos .tarjeta .info h3 {
+  font-size: 1.8rem;
+  color: #191919;
+}
+
+#proyectos .tarjeta .info p {
+  color: #191919;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding-left: 1.2rem;
+}
+
+#proyectos .tarjeta .repositorios a {
+  margin-top: 2rem;
+  background-color: #D94A24;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #F2F2F2;
+  padding: .8rem 3rem;
+  border-radius: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#proyectos .tarjeta .repositorios a i {
+  margin-right: .8rem;
+}
+
+#proyectos .tarjeta .tecnologias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#proyectos .tarjeta .tecnologias img {
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+}
+
+#proyectos .btn-contactame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 10rem;
+  margin-bottom: 0;
+}
+
+#proyectos .btn-contactame h3 {
+  color: #F2F2F2;
+  font-size: 1.4rem;
+}
+
+#proyectos .btn-contactame a {
+  text-decoration: none;
+  background-color: #D94A24;
+  padding: .8rem 3rem;
+  border-radius: 500px;
+  color: #F2F2F2;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#proyectos .tarjeta-final {
+  margin-bottom: 5rem;
+}
+
+#proyectos .tag {
+  margin-block: 0;
+  padding-block: 0;
+}
+
 body.light-mode {
   background-color: #F2F2F2;
 }
@@ -485,5 +614,21 @@ body.light-mode #buttons label .ball {
 
 body.light-mode .tag p {
   color: #090909;
+}
+
+body.light-mode #proyectos .tarjeta .info {
+  background-color: #191919;
+}
+
+body.light-mode #proyectos .tarjeta .info h3, body.light-mode #proyectos .tarjeta .info p {
+  color: #F2F2F2;
+}
+
+body.light-mode #proyectos .tarjeta .repositorios i {
+  color: #F2F2F2;
+}
+
+body.light-mode #proyectos .btn-contactame h3 {
+  color: #191919;
 }
 /*# sourceMappingURL=style.css.map */
