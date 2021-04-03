@@ -36,25 +36,6 @@ const darkMode = () => {
     checkbox.addEventListener('change', () => {
         //color del body y los ul tag
         document.body.classList.toggle('light-mode');
-        // //color de los tags h1 - h6, p, i y a
-        // document.querySelectorAll('h2').forEach((h2) => {
-        //     h2.classList.toggle('light-mode');
-        // });
-        // document.querySelectorAll('h1').forEach((h1) => {
-        //     h1.classList.toggle('light-mode');
-        // });
-        // document.querySelectorAll('p').forEach((p) => {
-        //     p.classList.toggle('light-mode');
-        // });
-        // document.querySelectorAll('a').forEach((a) => {
-        //     a.classList.toggle('light-mode');
-        // });
-        // document.querySelectorAll('i').forEach((i) => {
-        //     i.classList.toggle('light-mode');
-        // });
-
-        // //color de los divs de detalle
-        // document.getElementById('buttons').classList.toggle('light-mode')
     });
 };
 

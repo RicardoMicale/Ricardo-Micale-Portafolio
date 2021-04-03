@@ -33,7 +33,7 @@ nav {
   padding-top: 1rem;
   background-color: #191919;
   width: 100%;
-  z-index: 99;
+  z-index: 1;
 }
 
 nav h2 {
@@ -434,6 +434,102 @@ nav .links li {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-inline: 13vw;
+  }
+  nav ul li a:hover {
+    color: #b8b8b8;
+  }
+  nav .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .socials li a {
+    margin: .4rem;
+  }
+  nav .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: inherit;
+    position: relative;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 70vw;
+    top: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-animation: none;
+            animation: none;
+  }
+  nav .links li {
+    opacity: 1;
+  }
+  nav .links li a {
+    margin-inline: 1.2rem;
+  }
+  .inicio {
+    padding-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-inline: 10vw;
+  }
+  .inicio .titulo h1 {
+    font-size: 3.5rem;
+  }
+  .inicio .titulo p {
+    font-size: 1.2rem;
+    margin-top: -1rem;
+  }
+  .inicio .botones {
+    width: 30vw;
+    height: 100vh;
+    margin-top: 0;
+  }
+  .inicio .botones ul {
+    display: none;
+  }
+  .landing .tag {
+    position: absolute;
+    top: 75vh;
+    left: 13vw;
+  }
+  .landing .tag i {
+    top: -5vh;
+    left: 35vw;
+    position: absolute;
+  }
+}
+
 #proyectos .tarjeta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,7 +555,7 @@ nav .links li {
 #proyectos .tarjeta .info {
   background-color: #F2F2F2;
   max-width: 90vw;
-  padding: 1.6rem .8rem;
+  padding: 1.6rem 1.6rem;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
 }
@@ -473,7 +569,7 @@ nav .links li {
   color: #191919;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding-left: 1.2rem;
+  padding-inline: 1.2rem;
 }
 
 #proyectos .tarjeta .repositorios a {
@@ -563,12 +659,65 @@ nav .links li {
   padding-block: 0;
 }
 
+@media screen and (min-width: 1025px) {
+  #proyectos .tarjeta {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-inline: 13vw;
+  }
+  #proyectos .tarjeta .info, #proyectos .tarjeta img {
+    height: 45vh;
+  }
+  #proyectos .tarjeta img {
+    width: 30vw;
+    border-right: solid 2rem #D94A24;
+    border-bottom: none;
+  }
+  #proyectos .tarjeta .info {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+  #proyectos .tarjeta .info h3 {
+    font-size: 1.6rem;
+  }
+  #proyectos .tarjeta .info p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  #proyectos .tarjeta .tecnologias img {
+    width: 2rem;
+    height: 2rem;
+  }
+  #proyectos .tarjeta .repositorios {
+    margin-left: 2rem;
+  }
+  #proyectos .tarjeta .repositorios a {
+    padding: .4rem 2rem;
+    font-size: 1rem;
+  }
+  #proyectos .tarjeta .repositorios a i {
+    font-size: 1.3rem;
+    margin-right: .4rem;
+  }
+  #proyectos .btn-contactame a {
+    padding: .6rem 2rem;
+    font-size: 1rem;
+  }
+}
+
 body.light-mode {
   background-color: #F2F2F2;
 }
 
 body.light-mode nav {
   background-color: #F2F2F2;
+}
+
+body.light-mode nav ul li a:hover, body.light-mode nav ul li i:hover {
+  color: #D94A24;
 }
 
 body.light-mode h1, body.light-mode h2, body.light-mode p, body.light-mode a, body.light-mode i {

@@ -35,7 +35,7 @@ nav {
     padding-top: 1rem;
     background-color: $primary;
     width: 100%;
-    z-index: 99;
+    z-index: 1;
 
     h2 {
         color: $secondary;
@@ -328,6 +328,101 @@ nav {
     }
 }
 
+//Laning desktop 1024
+@media screen and (min-width: 1024px) {
+
+    .menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 13vw;
+
+        ul {
+
+            li a:hover {
+                color: #b8b8b8;
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li a {
+                margin: .4rem
+            }
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: row;
+            height: inherit;
+            position: relative;
+            transform: translateX(0%);
+            width: 70vw;
+            top: 0;
+            justify-content: center;
+            animation: none;
+
+            li {
+                opacity: 1;
+
+                a {
+                    margin-inline: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .inicio {
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-inline: 10vw;
+
+        .titulo {
+            
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-top: -1rem;
+            }
+        }
+
+        .botones {
+            width: 30vw;
+            height: 100vh;
+            margin-top: 0;
+
+            ul {
+                display: none;
+            }
+        }
+    }
+
+    .landing .tag {
+        position: absolute;
+        top: 75vh;
+        left: 13vw;
+
+        i {
+            top: -5vh;
+            left: 35vw;
+            position: absolute;
+        }
+        
+    }
+}
+
 //Proyectos
 
 #proyectos {
@@ -347,7 +442,7 @@ nav {
         .info {
             background-color: $secondary;
             max-width: 90vw;
-            padding: 1.6rem .8rem;
+            padding: 1.6rem 1.6rem;
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
 
@@ -360,7 +455,7 @@ nav {
                 color: $primary;
                 font-size: 1.2rem;
                 line-height: 2rem;
-                padding-left: 1.2rem;
+                padding-inline: 1.2rem;
             }
 
             
@@ -436,6 +531,71 @@ nav {
     }
 }
 
+@media screen and (min-width: 1025px) {
+
+    #proyectos {
+        .tarjeta {
+            flex-direction: row;
+            padding-inline: 13vw;
+
+            .info, img {
+                height: 45vh;
+            }
+    
+            img {
+                width: 30vw;
+                border-right: solid 2rem $acento;
+                border-bottom: none;
+            }
+    
+            .info {
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                h3 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                }
+
+            }
+
+            .tecnologias {
+                
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            .repositorios {
+                margin-left: 2rem;
+
+                a {
+                    padding: .4rem 2rem;
+                    font-size: 1rem;
+
+                    i {
+                        font-size: 1.3rem;
+                        margin-right: .4rem;
+                    }
+                }
+            }
+        }
+
+        .btn-contactame {
+            a {
+                padding: .6rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}
+
 //Acerca de y habilidades
 
 
@@ -446,7 +606,12 @@ body.light-mode{
     //Landing page
     nav {
         background-color: $secondary;
+        
+        ul li a:hover, ul li i:hover {
+            color: $acento;
+        }
     }
+
 
     h1, h2, p, a, i {
         color: $primary;
