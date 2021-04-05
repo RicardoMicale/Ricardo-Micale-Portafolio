@@ -386,7 +386,6 @@ nav {
         padding-inline: 10vw;
 
         .titulo {
-            
 
             h1 {
                 font-size: 3.5rem;
@@ -402,9 +401,15 @@ nav {
             width: 30vw;
             height: 100vh;
             margin-top: 0;
+            padding-top: 15rem;
 
             ul {
                 display: none;
+            }
+
+            div {
+                height: 6vh;
+                margin-bottom: 5rem;
             }
         }
     }
@@ -440,7 +445,7 @@ nav {
         }
 
         .info {
-            background-color: $secondary;
+            background-color: $detalles1;
             max-width: 90vw;
             padding: 1.6rem 1.6rem;
             border-bottom-left-radius: 2rem;
@@ -448,14 +453,14 @@ nav {
 
             h3 {
                 font-size: 1.8rem;
-                color: $primary;
+                color: $secondary;
             }
 
             p {
-                color: $primary;
+                color: $secondary;
                 font-size: 1.2rem;
                 line-height: 2rem;
-                padding-inline: 1.2rem;
+                margin-bottom: 3vh;
             }
 
             
@@ -583,6 +588,25 @@ nav {
                         margin-right: .4rem;
                     }
                 }
+
+                .git {
+                    background-color: transparent;
+                    border: solid 2px $acento;
+                    background-size: 200% 100%;
+                    background-image: linear-gradient(to right, transparent 50%, $acento 50%);
+                    transition: background-position .5s;
+
+                    &:hover {
+                        background-position: -100% 0;
+                    }
+                }
+
+                .visualizar {
+                    transition: background .5s ease;
+                    &:hover {
+                        background: #d33b11;
+                    }
+                }
             }
         }
 
@@ -664,17 +688,21 @@ body.light-mode{
         .tarjeta {
 
             .info {
-                background-color: $primary;
+                background-color: $detalles2;
 
                 h3, p {
-                    color: $secondary;
+                    color: $primary;
                 }
             }
 
             .repositorios {
 
-                i {
-                    color: $secondary;
+                i, a {
+                    color: $primary;
+                }
+
+                .visualizar:hover {
+                    background: #d43b11;
                 }
             }
         }

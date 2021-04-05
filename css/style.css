@@ -514,9 +514,14 @@ nav .links li {
     width: 30vw;
     height: 100vh;
     margin-top: 0;
+    padding-top: 15rem;
   }
   .inicio .botones ul {
     display: none;
+  }
+  .inicio .botones div {
+    height: 6vh;
+    margin-bottom: 5rem;
   }
   .landing .tag {
     position: absolute;
@@ -553,7 +558,7 @@ nav .links li {
 }
 
 #proyectos .tarjeta .info {
-  background-color: #F2F2F2;
+  background-color: #090909;
   max-width: 90vw;
   padding: 1.6rem 1.6rem;
   border-bottom-left-radius: 2rem;
@@ -562,14 +567,14 @@ nav .links li {
 
 #proyectos .tarjeta .info h3 {
   font-size: 1.8rem;
-  color: #191919;
+  color: #F2F2F2;
 }
 
 #proyectos .tarjeta .info p {
-  color: #191919;
+  color: #F2F2F2;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding-inline: 1.2rem;
+  margin-bottom: 3vh;
 }
 
 #proyectos .tarjeta .repositorios a {
@@ -702,6 +707,25 @@ nav .links li {
     font-size: 1.3rem;
     margin-right: .4rem;
   }
+  #proyectos .tarjeta .repositorios .git {
+    background-color: transparent;
+    border: solid 2px #D94A24;
+    background-size: 200% 100%;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #D94A24));
+    background-image: linear-gradient(to right, transparent 50%, #D94A24 50%);
+    -webkit-transition: background-position .5s;
+    transition: background-position .5s;
+  }
+  #proyectos .tarjeta .repositorios .git:hover {
+    background-position: -100% 0;
+  }
+  #proyectos .tarjeta .repositorios .visualizar {
+    -webkit-transition: background .5s ease;
+    transition: background .5s ease;
+  }
+  #proyectos .tarjeta .repositorios .visualizar:hover {
+    background: #d33b11;
+  }
   #proyectos .btn-contactame a {
     padding: .6rem 2rem;
     font-size: 1rem;
@@ -766,15 +790,19 @@ body.light-mode .tag p {
 }
 
 body.light-mode #proyectos .tarjeta .info {
-  background-color: #191919;
+  background-color: #D8D8D8;
 }
 
 body.light-mode #proyectos .tarjeta .info h3, body.light-mode #proyectos .tarjeta .info p {
-  color: #F2F2F2;
+  color: #191919;
 }
 
-body.light-mode #proyectos .tarjeta .repositorios i {
-  color: #F2F2F2;
+body.light-mode #proyectos .tarjeta .repositorios i, body.light-mode #proyectos .tarjeta .repositorios a {
+  color: #191919;
+}
+
+body.light-mode #proyectos .tarjeta .repositorios .visualizar:hover {
+  background: #d43b11;
 }
 
 body.light-mode #proyectos .btn-contactame h3 {
