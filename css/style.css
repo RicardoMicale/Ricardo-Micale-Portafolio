@@ -392,15 +392,8 @@ nav .links li {
           flex-direction: column;
 }
 
-.tag p {
-  font-size: 14px;
-  color: #F2F2F2;
-  margin-bottom: .8rem;
-  width: 50vw;
-  text-align: center;
-}
-
 .tag h2 {
+  text-transform: uppercase;
   font-size: 1.6rem;
   margin-block: 3rem;
   color: #F2F2F2;
@@ -707,10 +700,10 @@ nav .links li {
 }
 
 #proyectos .open-tag {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   #proyectos .tarjeta {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -823,7 +816,7 @@ nav .links li {
   color: #F2F2F2;
 }
 
-.habilidades .tag h2 {
+.habilidades div .tag h2 {
   font-size: 1.2rem;
 }
 
@@ -919,6 +912,222 @@ nav .links li {
   margin: 0.6rem 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .habilidades {
+    padding-inline: 13vw;
+  }
+  .habilidades .open-tag, .habilidades .tag {
+    padding-bottom: 0;
+  }
+  .habilidades .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .habilidades .about img {
+    width: 18vw;
+    border: none;
+    border-left: solid 1.4rem #D94A24;
+  }
+  .habilidades .about p {
+    margin-right: 7rem;
+  }
+  .habilidades .skills {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .habilidades .skills .tarjeta-skills {
+    padding-inline: 1.8rem;
+    width: 20vw;
+  }
+  .habilidades .skills .tarjeta-skills img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .habilidades .skills .titulo :is(h3, i) {
+    font-size: 1.2rem;
+  }
+  .habilidades .skills span {
+    font-size: .8rem;
+  }
+}
+
+.contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.2rem;
+}
+
+.contacto .open-tag {
+  padding-block: 1rem;
+}
+
+.contacto form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 70vw;
+}
+
+.contacto form label {
+  color: #D94A24;
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+  margin-bottom: .3rem;
+}
+
+.contacto form input {
+  border-radius: 500px;
+  height: 1.8rem;
+  width: 100%;
+  outline: none;
+}
+
+.contacto form textarea {
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  padding: .3rem 1rem;
+}
+
+.contacto form button {
+  outline: none;
+  border: none;
+  color: #F2F2F2;
+  background-color: #D94A24;
+  font-size: 1.1rem;
+  padding: .6rem 2rem;
+  border-radius: 500px;
+  margin-top: 1.3rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacto form button i {
+  margin-right: .6rem;
+}
+
+.contacto .redes {
+  padding: 2.2rem;
+  background-color: #090909;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacto .redes a {
+  text-decoration: none;
+  color: #F2F2F2;
+  margin-block: .4rem;
+}
+
+.contacto .redes .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacto .redes .contact-info a {
+  font-size: 1.1rem;
+}
+
+.contacto .redes .contact-info i {
+  font-size: 1.6rem;
+  margin-right: 1.2rem;
+}
+
+.contacto .redes .cv {
+  background-color: #D94A24;
+  padding: .8rem 2.2rem;
+  border-radius: 500px;
+  margin-block: 2rem;
+}
+
+.contacto .redes .cv i {
+  margin-right: .5rem;
+}
+
+.contacto .redes .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 2rem;
+}
+
+.contacto .redes .up i, .contacto .redes .up p {
+  color: #D94A24;
+}
+
+.contacto .redes .up i {
+  font-size: 2.6rem;
+}
+
 body.light-mode {
   background-color: #F2F2F2;
 }
@@ -998,6 +1207,23 @@ body.light-mode #proyectos .tarjeta .repositorios .visualizar:hover {
 }
 
 body.light-mode #proyectos .btn-contactame h3 {
+  color: #191919;
+}
+
+body.light-mode .habilidades h3 {
+  color: #191919;
+}
+
+body.light-mode .habilidades p {
+  color: #191919;
+}
+
+body.light-mode .habilidades .tarjeta-skills {
+  color: #191919;
+  background-color: #D8D8D8;
+}
+
+body.light-mode .habilidades .tarjeta-skills span {
   color: #191919;
 }
 /*# sourceMappingURL=style.css.map */

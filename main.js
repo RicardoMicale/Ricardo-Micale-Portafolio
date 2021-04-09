@@ -39,6 +39,10 @@ const darkMode = () => {
     });
 };
 
+const goUp = () => {
+    window.scrollTo({top: 0})
+}
+
 
 activarNav();
 darkMode();

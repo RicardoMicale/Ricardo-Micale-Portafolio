@@ -297,16 +297,8 @@ nav {
     align-items: center;
     flex-direction: column;
 
-    p {
-        font-size: 14px;
-        color: $secondary;
-        margin-bottom: .8rem;
-        width: 50vw;
-        text-align: center;
-    }
-
     h2 {
-        
+        text-transform: uppercase;
         font-size: 1.6rem;
         margin-block: 3rem;
         color: $secondary;
@@ -328,7 +320,7 @@ nav {
     }
 }
 
-//Laning desktop 1024
+//Landing desktop 1024
 @media screen and (min-width: 1024px) {
 
     .menu {
@@ -566,13 +558,14 @@ nav {
         margin-block: 0;
         padding-block: 0;
     }
+
+    .open-tag {
+        margin-bottom: 2rem;
+    }
 }
 
-#proyectos .open-tag {
-    margin-bottom: 5rem;
-}
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
     #proyectos {
         .tarjeta {
@@ -688,7 +681,8 @@ nav {
         }
     }
 
-    .tag h2 {
+    
+    div .tag h2 {
         font-size: 1.2rem;
     }
 
@@ -751,7 +745,176 @@ nav {
             }
         }
     }
+}
+//Habilidades y acerca de - Desktop
+@media screen and (min-width: 1024px) {
+    
+    .habilidades {
+        padding-inline: 13vw;
 
+        .open-tag, .tag {
+            padding-bottom: 0;
+        }
+
+        .about {
+            flex-direction: row;
+
+            img {
+                width: 18vw;
+                border: none;
+                border-left: solid 1.4rem $acento;
+            }
+
+            p {
+                margin-right: 7rem;
+            }
+        }
+
+        .skills {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+
+            .tarjeta-skills {
+                padding-inline: 1.8rem;
+                width: 20vw;
+
+                img {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
+            }
+
+            .titulo :is(h3, i) {
+                font-size: 1.2rem;
+            }
+
+            span {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+//Contacto
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2rem;
+
+    .open-tag {
+        padding-block: 1rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 70vw;
+
+        label {
+            color: $acento;
+            font-size: 1.2rem;
+            margin-top: 1.4rem;
+            margin-bottom: .3rem;
+        }
+
+        input {
+            border-radius: 500px;
+            height: 1.8rem;
+            width: 100%;
+            outline: none;
+        }
+
+        textarea {
+            border-radius: 10px;
+            width: 100%;
+            outline: none;
+            padding: .3rem 1rem;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            color: $secondary;
+            background-color: $acento;
+            font-size: 1.1rem;
+            padding: .6rem 2rem;
+            border-radius: 500px;
+            margin-top: 1.3rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: .6rem;
+            }
+        }
+    }
+
+    .redes {
+        padding: 2.2rem;
+        background-color: $detalles1;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $secondary;
+            margin-block: .4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            
+            a {
+                font-size: 1.1rem;
+            }
+
+            i {
+                font-size: 1.6rem;
+                margin-right: 1.2rem;
+            }
+
+        }
+
+        .cv {
+            background-color: $acento;
+            padding: .8rem 2.2rem;
+            border-radius: 500px;
+            margin-block: 2rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+
+        .up {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-block: 2rem;
+
+            i, p {
+                color: $acento;
+            }
+
+            i {
+                font-size: 2.6rem;
+            }
+        }
+
+    }
 }
 
 //Modo noche - Modo dia
@@ -851,6 +1014,26 @@ body.light-mode{
 
         .btn-contactame {
             h3 {
+                color: $primary;
+            }
+        }
+    }
+    //Acerca de y skills
+    .habilidades {
+
+        h3 {
+            color: $primary;
+        }
+
+        p {
+            color: $primary;
+        }
+
+        .tarjeta-skills {
+            color: $primary;
+            background-color: $detalles2;
+
+            span {
                 color: $primary;
             }
         }
