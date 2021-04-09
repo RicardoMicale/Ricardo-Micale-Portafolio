@@ -491,7 +491,24 @@ nav .links li {
     opacity: 1;
   }
   nav .links li a {
+    position: relative;
+    display: inline-block;
     margin-inline: 1.2rem;
+  }
+  nav .links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #F2F2F2;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+  }
+  nav .links li a:hover::before {
+    content: '';
+    width: 100%;
   }
   .inicio {
     padding-top: 0;
@@ -558,16 +575,45 @@ nav .links li {
 }
 
 #proyectos .tarjeta .info {
-  background-color: #090909;
   max-width: 90vw;
   padding: 1.6rem 1.6rem;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#proyectos .tarjeta .info h3 {
+#proyectos .tarjeta .info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+
+#proyectos .tarjeta .info div h3 {
   font-size: 1.8rem;
-  color: #F2F2F2;
+  color: #D8D8D8;
+}
+
+#proyectos .tarjeta .info div h5 {
+  background-color: #F2F2F2;
+  border-radius: 500px;
+  padding: 3px 1.2rem;
+  color: #090909;
 }
 
 #proyectos .tarjeta .info p {
@@ -655,13 +701,13 @@ nav .links li {
   font-size: 1.1rem;
 }
 
-#proyectos .tarjeta-final {
-  margin-bottom: 5rem;
-}
-
 #proyectos .tag {
   margin-block: 0;
   padding-block: 0;
+}
+
+#proyectos .open-tag {
+  margin-bottom: 5rem;
 }
 
 @media screen and (min-width: 1025px) {
@@ -673,7 +719,7 @@ nav .links li {
     padding-inline: 13vw;
   }
   #proyectos .tarjeta .info, #proyectos .tarjeta img {
-    height: 45vh;
+    height: 40vh;
   }
   #proyectos .tarjeta img {
     width: 30vw;
@@ -682,8 +728,8 @@ nav .links li {
   }
   #proyectos .tarjeta .info {
     border-bottom-left-radius: 0;
-    border-top-right-radius: 3rem;
-    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
   #proyectos .tarjeta .info h3 {
     font-size: 1.6rem;
@@ -697,11 +743,23 @@ nav .links li {
     height: 2rem;
   }
   #proyectos .tarjeta .repositorios {
+    height: 45vh;
     margin-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   #proyectos .tarjeta .repositorios a {
     padding: .4rem 2rem;
     font-size: 1rem;
+    margin-top: 0;
   }
   #proyectos .tarjeta .repositorios a i {
     font-size: 1.3rem;
@@ -730,6 +788,135 @@ nav .links li {
     padding: .6rem 2rem;
     font-size: 1rem;
   }
+  #proyectos .open-tag {
+    margin-top: 5rem;
+  }
+}
+
+.habilidades {
+  padding-inline: 2.2rem;
+}
+
+.habilidades .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.habilidades .about img {
+  width: 60vw;
+  border-bottom: solid 1rem #D94A24;
+  margin-bottom: 1em;
+}
+
+.habilidades .about p {
+  color: #F2F2F2;
+}
+
+.habilidades .tag h2 {
+  font-size: 1.2rem;
+}
+
+.habilidades .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.habilidades .skills .tarjeta-skills {
+  background-color: #090909;
+  border-radius: 30px;
+  padding-inline: 2rem;
+  margin-block: 2rem;
+}
+
+.habilidades .skills .titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F2F2F2;
+  margin-block: 2em;
+}
+
+.habilidades .skills .titulo h3 {
+  font-size: 1.6rem;
+  margin-inline: .8rem;
+}
+
+.habilidades .skills .titulo i {
+  font-size: 1.2rem;
+}
+
+.habilidades .skills .imagenes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 2;
+          flex: 3 2;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.habilidades .skills .imagenes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.habilidades .skills .imagenes div span {
+  color: #F2F2F2;
+  margin-bottom: 2em;
+}
+
+.habilidades .skills .imagenes img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.6rem 1rem;
 }
 
 body.light-mode {
@@ -789,11 +976,16 @@ body.light-mode .tag p {
   color: #090909;
 }
 
-body.light-mode #proyectos .tarjeta .info {
-  background-color: #D8D8D8;
+body.light-mode #proyectos .tarjeta .info div h3 {
+  color: #090909;
 }
 
-body.light-mode #proyectos .tarjeta .info h3, body.light-mode #proyectos .tarjeta .info p {
+body.light-mode #proyectos .tarjeta .info div h5 {
+  background-color: #191919;
+  color: #D8D8D8;
+}
+
+body.light-mode #proyectos .tarjeta .info p {
   color: #191919;
 }
 

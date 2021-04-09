@@ -368,12 +368,31 @@ nav {
             top: 0;
             justify-content: center;
             animation: none;
-
+            
             li {
                 opacity: 1;
-
+                
                 a {
+                    position: relative;
+                    display: inline-block;
                     margin-inline: 1.2rem;
+                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        bottom: -2px;
+                        left: 0;
+                        background-color: $secondary;
+                        transition: width .5s ease;
+                    }
+
+                    &:hover::before {
+                        content: '';
+                        width: 100%;
+                    }
+                    
                 }
             }
         }
@@ -445,16 +464,33 @@ nav {
         }
 
         .info {
-            background-color: $detalles1;
             max-width: 90vw;
             padding: 1.6rem 1.6rem;
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-            h3 {
-                font-size: 1.8rem;
-                color: $secondary;
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1em;
+
+                h3 {
+                    font-size: 1.8rem;
+                    color: $detalles2;
+                }
+
+                h5 {
+                    background-color: $secondary;
+                    border-radius: 500px;
+                    padding: 3px 1.2rem;
+                    color: $detalles1;
+                }
             }
+
 
             p {
                 color: $secondary;
@@ -526,14 +562,14 @@ nav {
         }
     }
 
-    .tarjeta-final {
-        margin-bottom: 5rem;
-    }
-
     .tag {
         margin-block: 0;
         padding-block: 0;
     }
+}
+
+#proyectos .open-tag {
+    margin-bottom: 5rem;
 }
 
 @media screen and (min-width: 1025px) {
@@ -544,7 +580,7 @@ nav {
             padding-inline: 13vw;
 
             .info, img {
-                height: 45vh;
+                height: 40vh;
             }
     
             img {
@@ -555,8 +591,9 @@ nav {
     
             .info {
                 border-bottom-left-radius: 0;
-                border-top-right-radius: 3rem;
-                border-bottom-right-radius: 3rem;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+
                 h3 {
                     font-size: 1.6rem;
                 }
@@ -577,11 +614,16 @@ nav {
             }
 
             .repositorios {
+                height: 45vh;
                 margin-left: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
 
                 a {
                     padding: .4rem 2rem;
                     font-size: 1rem;
+                    margin-top: 0;
 
                     i {
                         font-size: 1.3rem;
@@ -603,6 +645,7 @@ nav {
 
                 .visualizar {
                     transition: background .5s ease;
+
                     &:hover {
                         background: #d33b11;
                     }
@@ -616,12 +659,100 @@ nav {
                 font-size: 1rem;
             }
         }
+
+        .open-tag {
+            margin-top: 5rem;
+        }
     }
     
 }
 
 //Acerca de y habilidades
+.habilidades {
+    padding-inline: 2.2rem;
 
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        img {
+            width: 60vw;
+            border-bottom: solid 1rem $acento;
+            margin-bottom: 1em;
+        }
+
+        p {
+            color: $secondary;
+        }
+    }
+
+    .tag h2 {
+        font-size: 1.2rem;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        
+
+        .tarjeta-skills {
+            background-color: $detalles1;
+            border-radius: 30px;
+            padding-inline: 2rem;
+            margin-block: 2rem;
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $secondary;
+            margin-block: 2em;
+
+            h3 {
+                font-size: 1.6rem;
+                margin-inline: .8rem;
+            }
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+
+        .imagenes {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex: 3 2;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    color: $secondary;
+                    margin-bottom: 2em;
+                }
+            }
+
+            img {
+                width: 4rem;
+                height: 4rem;
+                margin: 0.6rem 1rem;
+            }
+        }
+    }
+
+}
 
 //Modo noche - Modo dia
 body.light-mode{
@@ -688,9 +819,20 @@ body.light-mode{
         .tarjeta {
 
             .info {
-                background-color: $detalles2;
 
-                h3, p {
+                div {
+
+                    h3 {
+                        color: $detalles1;
+                    }
+
+                    h5 {
+                        background-color: $primary;
+                        color: $detalles2;
+                    }
+                }
+
+                p {
                     color: $primary;
                 }
             }
