@@ -1316,7 +1316,7 @@ body.light-mode .habilidades .tarjeta-skills span {
   color: #191919;
 }
 
-body.light-mode .contacto i {
+body.light-mode .contacto i, body.light-mode .contacto a {
   color: #F2F2F2;
 }
 
