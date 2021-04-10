@@ -33,7 +33,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-inline: 2.2rem;
+  padding: 0 2.2rem;
   padding-top: 1rem;
   background-color: #191919;
   width: 100%;
@@ -62,13 +62,13 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #F2F2F2;
-  margin-inline: 2rem;
+  margin: 0 2rem;
   font-size: 1rem;
 }
 
 nav ul li a i {
   font-size: 1.6rem;
-  margin-inline: 0;
+  margin: 0;
 }
 
 nav .links {
@@ -280,7 +280,7 @@ nav .links li {
 
 .inicio .botones ul li {
   list-style: none;
-  margin-inline: 1rem;
+  margin: 0 1rem;
 }
 
 .inicio .botones a {
@@ -380,7 +380,8 @@ nav .links li {
 }
 
 .tag {
-  padding-block: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +400,8 @@ nav .links li {
 .tag h2 {
   text-transform: uppercase;
   font-size: 1.6rem;
-  margin-block: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   color: #F2F2F2;
 }
 
@@ -445,7 +447,8 @@ nav .links li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-inline: 13vw;
+    padding-left: 13vw;
+    padding-right: 13vw;
   }
   nav ul li a:hover {
     color: #b8b8b8;
@@ -490,7 +493,8 @@ nav .links li {
   nav .links li a {
     position: relative;
     display: inline-block;
-    margin-inline: 1.2rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
   }
   nav .links li a::before {
     content: '';
@@ -515,7 +519,8 @@ nav .links li {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding-inline: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
   .inicio .titulo h1 {
     font-size: 3.5rem;
@@ -699,8 +704,10 @@ nav .links li {
 }
 
 #proyectos .tag {
-  margin-block: 0;
-  padding-block: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #proyectos .open-tag {
@@ -713,7 +720,8 @@ nav .links li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-inline: 13vw;
+    padding-left: 13vw;
+    padding-right: 13vw;
   }
   #proyectos .tarjeta .info, #proyectos .tarjeta img {
     height: 40vh;
@@ -791,7 +799,8 @@ nav .links li {
 }
 
 .habilidades {
-  padding-inline: 2.2rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
 }
 
 .habilidades .about {
@@ -844,8 +853,10 @@ nav .links li {
 .habilidades .skills .tarjeta-skills {
   background-color: #090909;
   border-radius: 30px;
-  padding-inline: 2rem;
-  margin-block: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .habilidades .skills .titulo {
@@ -859,12 +870,14 @@ nav .links li {
       -ms-flex-align: center;
           align-items: center;
   color: #F2F2F2;
-  margin-block: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .habilidades .skills .titulo h3 {
   font-size: 1.6rem;
-  margin-inline: .8rem;
+  margin-left: .8rem;
+  margin-right: .8rem;
 }
 
 .habilidades .skills .titulo i {
@@ -918,7 +931,8 @@ nav .links li {
 
 @media screen and (min-width: 1024px) {
   .habilidades {
-    padding-inline: 13vw;
+    padding-left: 13vw;
+    padding-right: 13vw;
   }
   .habilidades .open-tag, .habilidades .tag {
     padding-bottom: 0;
@@ -950,7 +964,8 @@ nav .links li {
             align-items: stretch;
   }
   .habilidades .skills .tarjeta-skills {
-    padding-inline: 1.8rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
     width: 20vw;
   }
   .habilidades .skills .tarjeta-skills img {
@@ -983,7 +998,17 @@ nav .links li {
 }
 
 .contacto .open-tag {
-  padding-block: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contacto .final-tag {
+  padding-bottom: 0;
+}
+
+.contacto .final-tag h2 {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .contacto form {
@@ -1077,7 +1102,8 @@ nav .links li {
 .contacto .redes a {
   text-decoration: none;
   color: #F2F2F2;
-  margin-block: .4rem;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
 }
 
 .contacto .redes .contact-info {
@@ -1109,7 +1135,8 @@ nav .links li {
   background-color: #D94A24;
   padding: .8rem 2.2rem;
   border-radius: 500px;
-  margin-block: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .contacto .redes .cv i {
@@ -1130,7 +1157,8 @@ nav .links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-block: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   cursor: pointer;
 }
 
@@ -1147,8 +1175,7 @@ nav .links li {
     margin-bottom: 0;
   }
   .contacto {
-    padding-inline: 13vw;
-    padding-block: 0;
+    padding: 0 13vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1170,14 +1197,16 @@ nav .links li {
     margin-bottom: 0;
   }
   .contacto .redes .cv {
-    padding-block: .4rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
     font-size: .8rem;
     cursor: pointer;
   }
   .contacto .final-tag {
     position: absolute;
     bottom: 0;
-    padding-block: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .contacto .final-tag h2 {
     margin-bottom: 0;

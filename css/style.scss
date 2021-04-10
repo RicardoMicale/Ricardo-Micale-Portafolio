@@ -35,7 +35,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 2.2rem;
+    padding: 0 2.2rem;
     padding-top: 1rem;
     background-color: $primary;
     width: 100%;
@@ -57,12 +57,12 @@ nav {
             a {
                 text-decoration: none;
                 color: $secondary;
-                margin-inline: 2rem;
+                margin: 0 2rem;
                 font-size: 1rem;
 
                 i {
                     font-size: 1.6rem;
-                    margin-inline: 0;
+                    margin: 0;
                 }
             }
         }
@@ -206,7 +206,7 @@ nav {
 
             li {
                 list-style: none;
-                margin-inline: 1rem;
+                margin: 0 1rem;
 
                 
             }
@@ -295,7 +295,8 @@ nav {
 }
 
 .tag {
-    padding-block: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,7 +305,8 @@ nav {
     h2 {
         text-transform: uppercase;
         font-size: 1.6rem;
-        margin-block: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
         color: $secondary;
     }
 
@@ -335,7 +337,8 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-inline: 13vw;
+        padding-left: 13vw;
+        padding-right: 13vw;
 
         ul {
 
@@ -371,7 +374,8 @@ nav {
                 a {
                     position: relative;
                     display: inline-block;
-                    margin-inline: 1.2rem;
+                    margin-left: 1.2rem;
+                    margin-right: 1.2rem;
                     
                     &::before {
                         content: '';
@@ -398,7 +402,8 @@ nav {
         padding-top: 0;
         flex-direction: row;
         justify-content: space-around;
-        padding-inline: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
 
         .titulo {
 
@@ -559,8 +564,10 @@ nav {
     }
 
     .tag {
-        margin-block: 0;
-        padding-block: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .open-tag {
@@ -574,7 +581,8 @@ nav {
     #proyectos {
         .tarjeta {
             flex-direction: row;
-            padding-inline: 13vw;
+            padding-left: 13vw;
+            padding-right: 13vw;
 
             .info, img {
                 height: 40vh;
@@ -666,7 +674,8 @@ nav {
 
 //Acerca de y habilidades
 .habilidades {
-    padding-inline: 2.2rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
 
     .about {
         display: flex;
@@ -701,8 +710,10 @@ nav {
         .tarjeta-skills {
             background-color: $detalles1;
             border-radius: 30px;
-            padding-inline: 2rem;
-            margin-block: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .titulo {
@@ -710,11 +721,13 @@ nav {
             justify-content: center;
             align-items: center;
             color: $secondary;
-            margin-block: 2em;
+            margin-top: 2em;
+            margin-bottom: 2em;
 
             h3 {
                 font-size: 1.6rem;
-                margin-inline: .8rem;
+                margin-left: .8rem;
+                margin-right: .8rem;
             }
 
             i {
@@ -754,7 +767,8 @@ nav {
 @media screen and (min-width: 1024px) {
     
     .habilidades {
-        padding-inline: 13vw;
+        padding-left: 13vw;
+        padding-right: 13vw;
 
         .open-tag, .tag {
             padding-bottom: 0;
@@ -780,7 +794,8 @@ nav {
             align-items: stretch;
 
             .tarjeta-skills {
-                padding-inline: 1.8rem;
+                padding-left: 1.8rem;
+                padding-right: 1.8rem;
                 width: 20vw;
 
                 img {
@@ -809,7 +824,16 @@ nav {
     padding: 2.2rem;
 
     .open-tag {
-        padding-block: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .final-tag {
+        padding-bottom: 0;
+        h2 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
     }
 
     form {
@@ -880,7 +904,8 @@ nav {
         a {
             text-decoration: none;
             color: $secondary;
-            margin-block: .4rem;
+            margin-top: .4rem;
+            margin-bottom: .4rem;
         }
 
         .contact-info {
@@ -904,7 +929,8 @@ nav {
             background-color: $acento;
             padding: .8rem 2.2rem;
             border-radius: 500px;
-            margin-block: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
 
             i {
                 margin-right: .5rem;
@@ -916,7 +942,8 @@ nav {
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            margin-block: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             cursor: pointer;
 
             i, p {
@@ -927,7 +954,6 @@ nav {
                 font-size: 2.6rem;
             }
         }
-
     }
 }
 
@@ -941,8 +967,7 @@ nav {
     }
 
     .contacto {
-        padding-inline: 13vw;
-        padding-block: 0;
+        padding: 0 13vw;
         flex-direction: row;
         justify-content: space-between;
         position: relative;
@@ -964,7 +989,8 @@ nav {
             margin-bottom: 0;
 
             .cv {
-                padding-block: .4rem;
+                padding-top: .4rem;
+                padding-bottom: .4rem;
                 font-size: .8rem;
                 cursor: pointer;
             }
@@ -973,7 +999,8 @@ nav {
         .final-tag {
             position: absolute;
             bottom: 0;
-            padding-block: 0;
+            padding-top: 0;
+            padding-bottom: 0;
             
             h2 {
                 margin-bottom: 0;
