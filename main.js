@@ -43,6 +43,9 @@ const goUp = () => {
     window.scrollTo({top: 0})
 }
 
+const main = () => {
+    activarNav();
+    darkMode();
+}
 
-activarNav();
-darkMode();
+main();

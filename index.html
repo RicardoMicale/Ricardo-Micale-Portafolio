@@ -64,6 +64,7 @@
             <h2><span><</span>Portafolio<span>></span></h2>
         </div>
     </div>
+    <hr>
     <!-- Proyectos -->
     <div id="proyectos">
         <div class="tag open-tag">
@@ -250,18 +251,20 @@
             <h2><span>&lt;/</span>Acerca de<span>></span></h2>
         </div>
     </div>
+    <!-- Contacto y redes -->
+    <div class="tag open-tag contact-tag">
+        <h2><span><</span>Contacto<span>/></span></h2>
+    </div>
+    <hr>
     <div id="contacto" class="contacto">
-        <div class="tag open-tag">
-            <h2><span><</span>Contacto<span>/></span></h2>
-        </div>
-        <form action="">
+        <form action="mailto:ricardomicale@gmail.com" method="POST" enctype="text/plain">
             <label for="name">Nombre</label>
-            <input type="text" id="name">
+            <input type="text" id="name" placeholder="nombre" name="name">
             <label for="email">E-mail</label>
-            <input type="text" id="email">
+            <input type="email" id="email" placeholder="ejemplo@correo.com" name="email">
             <label for="msg">Mensaje</label>
-            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-            <button><i class="fas fa-paper-plane"></i>Enviar</button>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="mensaje"></textarea>
+            <a href="mailto:ricardomicale@gmail.com" id="enviar"><i class="fas fa-paper-plane"></i>Enviar</a>
         </form>
         <div class="redes">
             <div class="tag open-tag">
@@ -271,7 +274,7 @@
                 <a href="https://github.com/RicardoMicale" target="_blank"><i class="fab fa-github"></i>RicardoMicale</a>
                 <a href="" target="_blank"><i class="fab fa-linkedin"></i>RicardoMicale</a>
                 <a href="https://twitter.com/RicardoMicale" target="_blank"><i class="fab fa-twitter"></i>@RicardoMicale</a>
-                <a href=""><i class="fas fa-envelope"></i>ricardomicale@gmail.com</a>
+                <a href="mailto:ricardomicale@gmail.com"><i class="fas fa-envelope"></i>ricardomicale@gmail.com</a>
             </div>
             <a download="" class="cv"><i class="fas fa-download"></i>Curriculum</a>
             <div class="up" onclick="goUp()">
@@ -279,9 +282,9 @@
                 <p>Ir al inicio</p>
             </div>
         </div>
-    </div>
-    <div class="tag">
-        <h2><span>&lt;/</span>Portafolio<span>></span></h2>
+        <div class="tag final-tag">
+            <h2><span>&lt;/</span>Portafolio<span>></span></h2>
+        </div>
     </div>
 </body>
 <script src="main.js"></script>

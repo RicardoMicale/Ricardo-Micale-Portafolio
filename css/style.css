@@ -14,6 +14,10 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  border: solid 0.05px #D94A24;
+}
+
 span {
   color: #D94A24;
 }
@@ -999,6 +1003,12 @@ nav .links li {
   width: 70vw;
 }
 
+.contacto form input, .contacto form textarea {
+  background-color: #D8D8D8;
+  border: none;
+  color: #191919;
+}
+
 .contacto form label {
   color: #D94A24;
   font-size: 1.2rem;
@@ -1011,6 +1021,7 @@ nav .links li {
   height: 1.8rem;
   width: 100%;
   outline: none;
+  padding: 0 1rem;
 }
 
 .contacto form textarea {
@@ -1020,7 +1031,7 @@ nav .links li {
   padding: .3rem 1rem;
 }
 
-.contacto form button {
+.contacto form a {
   outline: none;
   border: none;
   color: #F2F2F2;
@@ -1036,9 +1047,11 @@ nav .links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.contacto form button i {
+.contacto form a i {
   margin-right: .6rem;
 }
 
@@ -1118,6 +1131,7 @@ nav .links li {
       -ms-flex-align: center;
           align-items: center;
   margin-block: 2rem;
+  cursor: pointer;
 }
 
 .contacto .redes .up i, .contacto .redes .up p {
@@ -1126,6 +1140,48 @@ nav .links li {
 
 .contacto .redes .up i {
   font-size: 2.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-tag h2 {
+    margin-bottom: 0;
+  }
+  .contacto {
+    padding-inline: 13vw;
+    padding-block: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .contacto form input, .contacto form textarea {
+    width: 80%;
+  }
+  .contacto form a {
+    font-size: 1rem;
+  }
+  .contacto .redes {
+    width: 40vw;
+    height: auto;
+    margin-bottom: 0;
+  }
+  .contacto .redes .cv {
+    padding-block: .4rem;
+    font-size: .8rem;
+    cursor: pointer;
+  }
+  .contacto .final-tag {
+    position: absolute;
+    bottom: 0;
+    padding-block: 0;
+  }
+  .contacto .final-tag h2 {
+    margin-bottom: 0;
+  }
 }
 
 body.light-mode {
@@ -1137,7 +1193,7 @@ body.light-mode nav {
 }
 
 body.light-mode nav ul li a:hover, body.light-mode nav ul li i:hover {
-  color: #D94A24;
+  color: #5a5a5a;
 }
 
 body.light-mode h1, body.light-mode h2, body.light-mode p, body.light-mode a, body.light-mode i {
@@ -1158,6 +1214,10 @@ body.light-mode .menu.open .burger {
 
 body.light-mode .links {
   background-color: #F2F2F2;
+}
+
+body.light-mode .links a::before {
+  background-color: #191919;
 }
 
 body.light-mode #buttons {
@@ -1224,6 +1284,18 @@ body.light-mode .habilidades .tarjeta-skills {
 }
 
 body.light-mode .habilidades .tarjeta-skills span {
+  color: #191919;
+}
+
+body.light-mode .contacto i {
+  color: #F2F2F2;
+}
+
+body.light-mode .redes {
+  background-color: #D8D8D8;
+}
+
+body.light-mode .redes .contact-info :is(a, i) {
   color: #191919;
 }
 /*# sourceMappingURL=style.css.map */
