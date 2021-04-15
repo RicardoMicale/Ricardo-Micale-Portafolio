@@ -15,7 +15,13 @@ body {
 }
 
 hr {
-  border: solid 0.05px #D94A24;
+  border: none;
+}
+
+@media screen and (min-width: 1024px) {
+  hr {
+    border: solid 0.05px #D94A24;
+  }
 }
 
 span {
@@ -574,13 +580,16 @@ nav .links li {
 #proyectos .tarjeta img {
   max-width: 90vw;
   border-bottom: solid 2rem #D94A24;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
 }
 
 #proyectos .tarjeta .info {
   max-width: 90vw;
   padding: 1.6rem 1.6rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,9 +609,9 @@ nav .links li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 1em;
 }
 
@@ -732,9 +741,7 @@ nav .links li {
     border-bottom: none;
   }
   #proyectos .tarjeta .info {
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    padding-top: 0.6rem;
   }
   #proyectos .tarjeta .info h3 {
     font-size: 1.6rem;
