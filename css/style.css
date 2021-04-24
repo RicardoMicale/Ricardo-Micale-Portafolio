@@ -618,7 +618,7 @@ nav .links li {
 
 #proyectos .tarjeta .info div h3 {
   font-size: 1.8rem;
-  color: #d8d8d8;
+  color: #f2f2f2;
 }
 
 #proyectos .tarjeta .info div h5 {
@@ -633,6 +633,7 @@ nav .links li {
   font-size: 1.2rem;
   line-height: 2rem;
   margin-bottom: 3vh;
+  opacity: 0.6;
 }
 
 #proyectos .tarjeta .repositorios a {
