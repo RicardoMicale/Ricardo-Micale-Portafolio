@@ -1,1155 +1,1144 @@
-// variables 
-$fonts: 'Red Hat Display', Helvetica;
-$fuentes: 'Poppins', sans-serif;
+// variables
+$fonts: "Red Hat Display", Helvetica;
+$fuentes: "Poppins", sans-serif;
 $primary: #191919;
-$secondary: #F2F2F2;
-$acento: #D94A24;
+$secondary: #f2f2f2;
+$acento: #d94a24;
 $detalles1: #090909;
-$detalles2: #D8D8D8;
+$detalles2: #d8d8d8;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $fuentes;
-    scroll-behavior: smooth;
-    transition: background .2s;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuentes;
+  scroll-behavior: smooth;
+  transition: background 0.2s;
 }
 
 body {
-    background-color: $primary;
-    overflow-x: hidden;
+  background-color: $primary;
+  overflow-x: hidden;
 }
 
 hr {
-    border: none;
+  border: none;
 }
 
 @media screen and (min-width: 1024px) {
-    hr {
-        border:solid .05px $acento;
-    }
+  hr {
+    border: solid 0.05px $acento;
+  }
 }
 
 span {
-    color: $acento;
+  color: $acento;
 }
 
 //Navbar
 nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.2rem;
+  padding-top: 1rem;
+  background-color: $primary;
+  width: 100%;
+  z-index: 1;
+
+  h2 {
+    color: $secondary;
+    font-size: 1.6rem;
+  }
+
+  ul {
+    display: none;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 2.2rem;
-    padding-top: 1rem;
-    background-color: $primary;
-    width: 100%;
-    z-index: 1;
 
-    h2 {
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
         color: $secondary;
-        font-size: 1.6rem;
-    }
+        margin: 0 2rem;
+        font-size: 1rem;
 
-    ul {
-        display: none;
-        justify-content: space-evenly;
-        align-items: center;
-
-        li {
-            list-style: none;
-
-            a {
-                text-decoration: none;
-                color: $secondary;
-                margin: 0 2rem;
-                font-size: 1rem;
-
-                i {
-                    font-size: 1.6rem;
-                    margin: 0;
-                }
-            }
+        i {
+          font-size: 1.6rem;
+          margin: 0;
         }
+      }
     }
+  }
 
-    .links {
-        flex-direction: column;
-        position: absolute;
-        right: 0;
-        top: 8vh;
-        background-color: $primary;
-        width: 50%;
-        height: 92vh;
-        transform: translateX(100%);
-        animation: abrir 0.5s ease-in-out;
+  .links {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    background-color: $primary;
+    width: 50%;
+    height: 92vh;
+    transform: translateX(100%);
+    animation: abrir 0.5s ease-in-out;
 
-        li {
-            opacity: 0;
-        }
+    li {
+      opacity: 0;
     }
+  }
 }
 //Boton hamburger
 .menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: all 3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 3s ease-in-out;
 
-    .burger {
-        position: absolute;
-        right: 0;
-        width: 30px;
-        height: 5px;
-        background-color: $secondary;
-        border-radius: 50px;
-        transition: all .5s ease-in-out;
+  .burger {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 5px;
+    background-color: $secondary;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
 
-        &::before, &::after {
-            content: '';
-            position: absolute;
-            right: 8px;
-            width: 30px;
-            height: 5px;
-            background-color: $secondary;
-            border-radius: 50px;
-            transition: all .5s ease-in-out;
-        }
-
-        &::before {
-            transform: translateY(-12px);
-        }
-
-        &::after {
-            transform: translateY(12px);
-        }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      width: 30px;
+      height: 5px;
+      background-color: $secondary;
+      border-radius: 50px;
+      transition: all 0.5s ease-in-out;
     }
-}
-//Animacion menu 
-
-.menu.open .burger {
-    transform: translateX(-50px);
-    background: transparent;
 
     &::before {
-        transform: rotate(45deg) translate(35px, -35px);
+      transform: translateY(-12px);
     }
 
     &::after {
-        transform: rotate(-45deg) translate(35px, 35px);
+      transform: translateY(12px);
     }
+  }
+}
+//Animacion menu
+
+.menu.open .burger {
+  transform: translateX(-50px);
+  background: transparent;
+
+  &::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 }
 
 .links.nav-open {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 @keyframes abrir {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes navOpen {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    } 
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 //Inicio, titulos y botones
 
 .enlaces i {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 9rem;
+
+  h1 {
+    text-align: center;
+    color: $secondary;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $secondary;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .botones {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 9rem;
+    background-color: $detalles1;
+    width: 100%;
+    height: 50%;
+    margin-top: 7rem;
+    padding: 3rem 0;
 
-    h1 {
-        text-align: center;
-        color: $secondary;
-        font-size: 2rem;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      li {
+        list-style: none;
+        margin: 0 1rem;
+      }
     }
 
-    p {
-        color: $secondary;
-        text-align: center;
-        font-size: .8rem;
+    a {
+      color: $secondary;
+      text-decoration: none;
     }
 
-    .botones {
+    div {
+      width: 50%;
+      height: 5vh;
+      border-radius: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .contenedor-pro {
+      background-color: $acento;
+      margin-bottom: 1.5rem;
+    }
+
+    .contenedor-hab {
+      background-color: $secondary;
+      margin-top: 1.5rem;
+
+      a {
+        color: $primary;
+        text-transform: uppercase;
+      }
+    }
+
+    .dark-mode {
+      padding-top: 5vh;
+
+      .checkbox {
+        position: absolute;
+        opacity: 0;
+
+        &:checked + label {
+          background-color: $primary;
+        }
+
+        &:checked + label .ball {
+          background-color: $secondary;
+          transform: translateX(32px);
+        }
+      }
+
+      label {
+        cursor: pointer;
+        width: 4rem;
+        height: 2rem;
+        border: solid $secondary 3px;
+        border-radius: 500px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        background-color: $detalles1;
-        width: 100%;
-        height: 50%;
-        margin-top: 7rem;
-        padding: 3rem 0;
+        justify-content: space-between;
+        padding: 2.5px;
+        position: relative;
 
-        ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 2rem;
-
-            li {
-                list-style: none;
-                margin: 0 1rem;
-
-                
-            }
+        .fa-moon {
+          color: #f1a90f;
+          font-size: 1.2rem;
         }
 
-        a {
-            color: $secondary;
-            text-decoration: none;
+        .fa-sun {
+          color: #d98b24;
+          font-size: 1.2rem;
         }
 
-        div {
-            width: 50%;
-            height: 5vh;
-            border-radius: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 500;
+        .ball {
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          background-color: $secondary;
+          top: 1px;
+          left: 1.5px;
+          transition: transform 0.3s linear;
         }
-
-        .contenedor-pro {
-            background-color: $acento;
-            margin-bottom: 1.5rem;
-        }
-
-        .contenedor-hab {
-            background-color: $secondary;
-            margin-top: 1.5rem;
-
-            a {
-                color: $primary;
-                text-transform: uppercase;
-            }
-        }
-
-        .dark-mode {
-            padding-top: 5vh;
-
-            .checkbox {
-                position: absolute;
-                opacity: 0;
-
-                &:checked + label {
-                    background-color: $primary;
-                }
-
-                &:checked + label .ball {
-                    background-color: $secondary;
-                    transform: translateX(32px);
-                }
-            }
-            
-            label {
-                width: 4rem;
-                height: 2rem;
-                border: solid $secondary 3px;
-                border-radius: 500px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 2.5px;
-                position: relative;
-
-                .fa-moon {
-                    color: #f1a90f;
-                    font-size: 1.2rem;
-                }
-
-                .fa-sun {
-                    color: #d98b24;
-                    font-size: 1.2rem;
-                }
-
-                .ball {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    position: absolute;
-                    background-color: $secondary;
-                    top: 1px;
-                    left: 1.5px;
-                    transition: transform .3s linear;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 .tag {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    h2 {
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        color: $secondary;
-    }
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: $secondary;
+  }
 
-    i {
-        font-size: 1.5rem;
-        color: $secondary;
-        animation: callToAction 1s infinite alternate-reverse;
-    }
+  i {
+    font-size: 1.5rem;
+    color: $secondary;
+    animation: callToAction 1s infinite alternate-reverse;
+  }
 }
 
 @keyframes callToAction {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(20px);
-    }
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
 }
 
 //Landing desktop 1024
 @media screen and (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
 
-    .menu {
-        display: none;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 13vw;
+    padding-right: 13vw;
+
+    ul {
+      li a:hover {
+        color: #b8b8b8;
+      }
     }
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 13vw;
-        padding-right: 13vw;
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        ul {
-
-            li a:hover {
-                color: #b8b8b8;
-            }
-        }
-
-        .socials {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            li a {
-                margin: .4rem
-            }
-        }
-        
-        .links {
-            display: flex;
-            flex-direction: row;
-            height: inherit;
-            position: relative;
-            transform: translateX(0%);
-            width: 70vw;
-            top: 0;
-            justify-content: center;
-            animation: none;
-            
-            li {
-                opacity: 1;
-                
-                a {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 1.2rem;
-                    margin-right: 1.2rem;
-                    
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        bottom: -2px;
-                        left: 0;
-                        background-color: $secondary;
-                        transition: width .5s ease;
-                    }
-
-                    &:hover::before {
-                        content: '';
-                        width: 100%;
-                    }
-                    
-                }
-            }
-        }
+      li a {
+        margin: 0.4rem;
+      }
     }
 
-    .inicio {
-        padding-top: 0;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-left: 10vw;
-        padding-right: 10vw;
+    .links {
+      display: flex;
+      flex-direction: row;
+      height: inherit;
+      position: relative;
+      transform: translateX(0%);
+      width: 70vw;
+      top: 0;
+      justify-content: center;
+      animation: none;
 
-        .titulo {
+      li {
+        opacity: 1;
 
-            h1 {
-                font-size: 3.5rem;
-            }
+        a {
+          position: relative;
+          display: inline-block;
+          margin-left: 1.2rem;
+          margin-right: 1.2rem;
 
-            p {
-                font-size: 1.2rem;
-                margin-top: -1rem;
-            }
-        }
-
-        .botones {
-            width: 30vw;
-            height: 100vh;
-            margin-top: 0;
-            padding-top: 15rem;
-
-            ul {
-                display: none;
-            }
-
-            div {
-                height: 6vh;
-                margin-bottom: 5rem;
-            }
-        }
-    }
-
-    .landing .tag {
-        position: absolute;
-        top: 75vh;
-        left: 13vw;
-
-        i {
-            top: -5vh;
-            left: 35vw;
+          &::before {
+            content: "";
             position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: $secondary;
+            transition: width 0.5s ease;
+          }
+
+          &:hover::before {
+            content: "";
+            width: 100%;
+          }
         }
-        
+      }
     }
+  }
+
+  .inicio {
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    .titulo {
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-top: -1rem;
+      }
+    }
+
+    .botones {
+      width: 30vw;
+      height: 100vh;
+      margin-top: 0;
+      padding-top: 15rem;
+
+      ul {
+        display: none;
+      }
+
+      div {
+        height: 6vh;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .landing .tag {
+    position: absolute;
+    top: 75vh;
+    left: 13vw;
+
+    i {
+      top: -5vh;
+      left: 35vw;
+      position: absolute;
+    }
+  }
 }
 
 //Proyectos
 
 #proyectos {
-
-    .tarjeta {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10rem;
-
-        img {
-            max-width: 90vw;
-            border-bottom: solid 2rem $acento;
-            image-rendering: pixelated;
-        }
-
-        .info {
-            max-width: 90vw;
-            padding: 1.6rem 1.6rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            div {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                margin-bottom: 1em;
-
-                h3 {
-                    font-size: 1.8rem;
-                    color: $detalles2;
-                }
-
-                h5 {
-                    background-color: $secondary;
-                    border-radius: 500px;
-                    padding: 3px 1.2rem;
-                    color: $detalles1;
-                }
-            }
-
-
-            p {
-                color: $secondary;
-                font-size: 1.2rem;
-                line-height: 2rem;
-                margin-bottom: 3vh;
-            }
-
-            
-        }
-        //botones al repositorio de github y al proyecto
-        .repositorios {
-            a {
-                margin-top: 2rem;
-                background-color: $acento;
-                font-family: $fuentes;
-                font-size: 1.4rem;
-                text-decoration: none;
-                color: $secondary;
-                padding: .8rem 3rem;
-                border-radius: 50rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                i {
-                    margin-right: .8rem;
-                }
-                
-            }
-        }
-        //logos de los lenguajes y demas que se uso para hacer el proyecto
-        .tecnologias {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-wrap: wrap;
-
-            img {
-                margin: 0;
-                width: 3rem;
-                height: 3rem;
-                border: none;
-            }
-        }
-    }
-
-    .btn-contactame {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        height: 10rem;
-        margin-bottom: 0;
-
-        h3 {
-            color: $secondary;
-            font-size: 1.4rem;
-        }
-
-        a {
-            text-decoration: none;
-            background-color: $acento;
-            padding: .8rem 3rem;
-            border-radius: 500px;
-            color: $secondary;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-    }
-
-    .tag {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .open-tag {
-        margin-bottom: 2rem;
-    }
-}
-
-
-@media screen and (min-width: 1024px) {
-
-    #proyectos {
-        .tarjeta {
-            flex-direction: row;
-            padding-left: 13vw;
-            padding-right: 13vw;
-
-            .info, img {
-                height: 40vh;
-            }
-    
-            img {
-                width: 30vw;
-                border-right: solid 2rem $acento;
-                border-bottom: none;
-            }
-    
-            .info {
-                padding-top: 0.6rem;
-
-                h3 {
-                    font-size: 1.6rem;
-                }
-
-                p {
-                    font-size: 1rem;
-                    line-height: 1.6rem;
-                }
-
-            }
-
-            .tecnologias {
-                
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
-
-            .repositorios {
-                height: 45vh;
-                margin-left: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-
-                a {
-                    padding: .4rem 2rem;
-                    font-size: 1rem;
-                    margin-top: 0;
-
-                    i {
-                        font-size: 1.3rem;
-                        margin-right: .4rem;
-                    }
-                }
-
-                .git {
-                    background-color: transparent;
-                    border: solid 2px $acento;
-                    background-size: 200% 100%;
-                    background-image: linear-gradient(to right, transparent 50%, $acento 50%);
-                    transition: background-position .5s;
-
-                    &:hover {
-                        background-position: -100% 0;
-                    }
-                }
-
-                .visualizar {
-                    transition: background .5s ease;
-
-                    &:hover {
-                        background: #d33b11;
-                    }
-                }
-            }
-        }
-
-        .btn-contactame {
-            a {
-                padding: .6rem 2rem;
-                font-size: 1rem;
-            }
-        }
-
-        .open-tag {
-            margin-top: 5rem;
-        }
-    }
-    
-}
-
-//Acerca de y habilidades
-.habilidades {
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
-
-    .about {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-
-        img {
-            width: 60vw;
-            border-bottom: solid 1rem $acento;
-            margin-bottom: 1em;
-        }
-
-        p {
-            color: $secondary;
-        }
-    }
-
-    
-    div .tag h2 {
-        font-size: 1.2rem;
-    }
-
-    .skills {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        
-
-        .tarjeta-skills {
-            background-color: $detalles1;
-            border-radius: 30px;
-            padding-left: 2rem;
-            padding-right: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .titulo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $secondary;
-            margin-top: 2em;
-            margin-bottom: 2em;
-
-            h3 {
-                font-size: 1.6rem;
-                margin-left: .8rem;
-                margin-right: .8rem;
-            }
-
-            i {
-                font-size: 1.2rem;
-            }
-        }
-
-        .imagenes {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex: 3 2;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                span {
-                    color: $secondary;
-                    margin-bottom: 2em;
-                }
-            }
-
-            img {
-                width: 4rem;
-                height: 4rem;
-                margin: 0.6rem 1rem;
-            }
-        }
-    }
-}
-//Habilidades y acerca de - Desktop
-@media screen and (min-width: 1024px) {
-    
-    .habilidades {
-        padding-left: 13vw;
-        padding-right: 13vw;
-
-        .open-tag, .tag {
-            padding-bottom: 0;
-        }
-
-        .about {
-            flex-direction: row;
-
-            img {
-                width: 18vw;
-                border: none;
-                border-left: solid 1.4rem $acento;
-            }
-
-            p {
-                margin-right: 7rem;
-            }
-        }
-
-        .skills {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-
-            .tarjeta-skills {
-                padding-left: 1.8rem;
-                padding-right: 1.8rem;
-                width: 20vw;
-
-                img {
-                    width: 3.5rem;
-                    height: 3.5rem;
-                }
-            }
-
-            .titulo :is(h3, i) {
-                font-size: 1.2rem;
-            }
-
-            span {
-                font-size: .8rem;
-            }
-        }
-    }
-}
-
-//Contacto
-.contacto {
+  .tarjeta {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2.2rem;
+    margin-bottom: 10rem;
 
-    .open-tag {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    img {
+      max-width: 90vw;
+      border-bottom: solid 2rem $acento;
+      image-rendering: pixelated;
     }
 
-    .final-tag {
-        padding-bottom: 0;
-        h2 {
-            margin-bottom: 0;
-            margin-top: 0;
+    .info {
+      max-width: 90vw;
+      padding: 1.6rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+
+        h3 {
+          font-size: 1.8rem;
+          color: $detalles2;
         }
+
+        h5 {
+          background-color: $secondary;
+          border-radius: 500px;
+          padding: 3px 1.2rem;
+          color: $detalles1;
+        }
+      }
+
+      p {
+        color: $secondary;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 3vh;
+      }
+    }
+    //botones al repositorio de github y al proyecto
+    .repositorios {
+      a {
+        margin-top: 2rem;
+        background-color: $acento;
+        font-family: $fuentes;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $secondary;
+        padding: 0.8rem 3rem;
+        border-radius: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+    //logos de los lenguajes y demas que se uso para hacer el proyecto
+    .tecnologias {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+
+      img {
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+      }
+    }
+  }
+
+  .btn-contactame {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 10rem;
+    margin-bottom: 0;
+
+    h3 {
+      color: $secondary;
+      font-size: 1.4rem;
     }
 
-    form {
+    a {
+      text-decoration: none;
+      background-color: $acento;
+      padding: 0.8rem 3rem;
+      border-radius: 500px;
+      color: $secondary;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+
+  .tag {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .open-tag {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #proyectos {
+    .tarjeta {
+      flex-direction: row;
+      padding-left: 13vw;
+      padding-right: 13vw;
+
+      .info,
+      img {
+        height: 40vh;
+      }
+
+      img {
+        width: 30vw;
+        border-right: solid 2rem $acento;
+        border-bottom: none;
+      }
+
+      .info {
+        padding-top: 0.6rem;
+
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.6rem;
+        }
+      }
+
+      .tecnologias {
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      .repositorios {
+        height: 45vh;
+        margin-left: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 70vw;
-
-        input, textarea {
-            background-color: $detalles2;
-            border: none;
-            color: $primary;
-        }
-
-        label {
-            color: $acento;
-            font-size: 1.2rem;
-            margin-top: 1.4rem;
-            margin-bottom: .3rem;
-        }
-
-        input {
-            border-radius: 500px;
-            height: 1.8rem;
-            width: 100%;
-            outline: none;
-            padding: 0 1rem;
-        }
-
-        textarea {
-            border-radius: 10px;
-            width: 100%;
-            outline: none;
-            padding: .3rem 1rem;
-        }
+        justify-content: space-evenly;
 
         a {
-            outline: none;
-            border: none;
-            color: $secondary;
-            background-color: $acento;
-            font-size: 1.1rem;
-            padding: .6rem 2rem;
-            border-radius: 500px;
-            margin-top: 1.3rem;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            text-decoration: none;
+          padding: 0.4rem 2rem;
+          font-size: 1rem;
+          margin-top: 0;
 
-            i {
-                margin-right: .6rem;
-            }
+          i {
+            font-size: 1.3rem;
+            margin-right: 0.4rem;
+          }
         }
+
+        .git {
+          background-color: transparent;
+          border: solid 2px $acento;
+          background-size: 200% 100%;
+          background-image: linear-gradient(
+            to right,
+            transparent 50%,
+            $acento 50%
+          );
+          transition: background-position 0.5s;
+
+          &:hover {
+            background-position: -100% 0;
+          }
+        }
+
+        .visualizar {
+          transition: background 0.5s ease;
+
+          &:hover {
+            background: #d33b11;
+          }
+        }
+      }
     }
 
-    .redes {
-        padding: 2.2rem;
-        background-color: $detalles1;
-        width: 100vw;
+    .btn-contactame {
+      a {
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+      }
+    }
+
+    .open-tag {
+      margin-top: 5rem;
+    }
+  }
+}
+
+//Acerca de y habilidades
+.habilidades {
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    img {
+      width: 60vw;
+      border-bottom: solid 1rem $acento;
+      margin-bottom: 1em;
+    }
+
+    p {
+      color: $secondary;
+    }
+  }
+
+  div .tag h2 {
+    font-size: 1.2rem;
+  }
+
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .tarjeta-skills {
+      background-color: $detalles1;
+      border-radius: 30px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary;
+      margin-top: 2em;
+      margin-bottom: 2em;
+
+      h3 {
+        font-size: 1.6rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+      }
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+
+    .imagenes {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 3 2;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+
+      div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        a {
-            text-decoration: none;
-            color: $secondary;
-            margin-top: .4rem;
-            margin-bottom: .4rem;
+        span {
+          color: $secondary;
+          margin-bottom: 2em;
         }
+      }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            
-            a {
-                font-size: 1.1rem;
-            }
-
-            i {
-                font-size: 1.6rem;
-                margin-right: 1.2rem;
-            }
-
-        }
-
-        .cv {
-            background-color: $acento;
-            padding: .8rem 2.2rem;
-            border-radius: 500px;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-
-            i {
-                margin-right: .5rem;
-            }
-        }
-
-        .up {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            cursor: pointer;
-
-            i, p {
-                color: $acento;
-            }
-
-            i {
-                font-size: 2.6rem;
-            }
-        }
+      img {
+        width: 4rem;
+        height: 4rem;
+        margin: 0.6rem 1rem;
+      }
     }
+  }
+}
+//Habilidades y acerca de - Desktop
+@media screen and (min-width: 1024px) {
+  .habilidades {
+    padding-left: 13vw;
+    padding-right: 13vw;
+
+    .open-tag,
+    .tag {
+      padding-bottom: 0;
+    }
+
+    .about {
+      flex-direction: row;
+
+      img {
+        width: 18vw;
+        border: none;
+        border-left: solid 1.4rem $acento;
+      }
+
+      p {
+        margin-right: 7rem;
+      }
+    }
+
+    .skills {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+
+      .tarjeta-skills {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        width: 20vw;
+
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+
+      .titulo :is(h3, i) {
+        font-size: 1.2rem;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+//Contacto
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2rem;
+
+  .open-tag {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .final-tag {
+    padding-bottom: 0;
+    h2 {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70vw;
+
+    input,
+    textarea {
+      background-color: $detalles2;
+      border: none;
+      color: $primary;
+    }
+
+    label {
+      color: $acento;
+      font-size: 1.2rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      border-radius: 500px;
+      height: 1.8rem;
+      width: 100%;
+      outline: none;
+      padding: 0 1rem;
+    }
+
+    textarea {
+      border-radius: 10px;
+      width: 100%;
+      outline: none;
+      padding: 0.3rem 1rem;
+    }
+
+    a {
+      outline: none;
+      border: none;
+      color: $secondary;
+      background-color: $acento;
+      font-size: 1.1rem;
+      padding: 0.6rem 2rem;
+      border-radius: 500px;
+      margin-top: 1.3rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+
+      i {
+        margin-right: 0.6rem;
+      }
+    }
+  }
+
+  .redes {
+    padding: 2.2rem;
+    background-color: $detalles1;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $secondary;
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      a {
+        font-size: 1.1rem;
+      }
+
+      i {
+        font-size: 1.6rem;
+        margin-right: 1.2rem;
+      }
+    }
+
+    .cv {
+      background-color: $acento;
+      padding: 0.8rem 2.2rem;
+      border-radius: 500px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .up {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+
+      i,
+      p {
+        color: $acento;
+      }
+
+      i {
+        font-size: 2.6rem;
+      }
+    }
+  }
 }
 
 //contacto desktop
 @media screen and (min-width: 1024px) {
+  .contact-tag {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
 
-    .contact-tag {
-        h2 {
-            margin-bottom: 0;
-        }
+  .contacto {
+    padding: 0 13vw;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    form {
+      input,
+      textarea {
+        width: 80%;
+      }
+
+      a {
+        font-size: 1rem;
+      }
     }
 
-    .contacto {
-        padding: 0 13vw;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
+    .redes {
+      width: 40vw;
+      height: auto;
+      margin-bottom: 0;
 
-        form {
-
-            input, textarea {
-                width: 80%;
-            }
-
-            a {
-                font-size: 1rem;
-            }
-        }
-
-        .redes {
-            width: 40vw;
-            height: auto;
-            margin-bottom: 0;
-
-            .cv {
-                padding-top: .4rem;
-                padding-bottom: .4rem;
-                font-size: .8rem;
-                cursor: pointer;
-            }
-        }
-
-        .final-tag {
-            position: absolute;
-            bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            
-            h2 {
-                margin-bottom: 0;
-            }
-        }
+      .cv {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
     }
+
+    .final-tag {
+      position: absolute;
+      bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 //Modo noche - Modo dia
-body.light-mode{
+body.light-mode {
+  background-color: $secondary;
+
+  //Landing page
+  nav {
     background-color: $secondary;
 
-    //Landing page
-    nav {
-        background-color: $secondary;
-        
-        ul li a:hover, ul li i:hover {
-            color: #5a5a5a;
-        }
+    ul li a:hover,
+    ul li i:hover {
+      color: #5a5a5a;
+    }
+  }
+
+  h1,
+  h2,
+  p,
+  a,
+  i {
+    color: $primary;
+  }
+
+  .menu .burger {
+    background-color: $primary;
+
+    &::after,
+    &::before {
+      background-color: $primary;
+    }
+  }
+
+  .menu.open .burger {
+    background: transparent;
+  }
+
+  .links {
+    background-color: $secondary;
+
+    a::before {
+      background-color: $primary;
+    }
+  }
+
+  #buttons {
+    background-color: $detalles2;
+
+    .contenedor-hab {
+      background-color: $primary;
+
+      a {
+        color: $secondary;
+      }
     }
 
+    label {
+      border-color: $primary;
+      background-color: $secondary;
 
-    h1, h2, p, a, i {
-        color: $primary;
-    }
-
-    .menu .burger {
+      .ball {
         background-color: $primary;
+      }
+    }
+  }
 
-        &::after, &::before {
+  .tag p {
+    color: $detalles1;
+  }
+  //Pagina de proyectos
+
+  #proyectos {
+    .tarjeta {
+      .info {
+        div {
+          h3 {
+            color: $detalles1;
+          }
+
+          h5 {
             background-color: $primary;
-        }
-    }
-
-    .menu.open .burger {
-        background: transparent;
-    }
-
-    .links {
-        background-color: $secondary;
-
-        a::before {
-            background-color: $primary;
-        }
-    }
-
-    #buttons {
-        background-color: $detalles2;
-
-        .contenedor-hab {
-            background-color: $primary;
-            
-            a {
-                color: $secondary;
-            }
-        }
-
-        label {
-            border-color: $primary;
-            background-color: $secondary;
-
-            .ball {
-                background-color: $primary;
-            }
-        }
-    }
-
-    .tag p {
-        color: $detalles1;
-    }
-    //Pagina de proyectos
-    
-    #proyectos {
-
-        .tarjeta {
-
-            .info {
-
-                div {
-
-                    h3 {
-                        color: $detalles1;
-                    }
-
-                    h5 {
-                        background-color: $primary;
-                        color: $detalles2;
-                    }
-                }
-
-                p {
-                    color: $primary;
-                }
-            }
-
-            .repositorios {
-
-                i, a {
-                    color: $primary;
-                }
-
-                .visualizar:hover {
-                    background: #d43b11;
-                }
-            }
-        }
-
-        .btn-contactame {
-            h3 {
-                color: $primary;
-            }
-        }
-    }
-    //Acerca de y skills
-    .habilidades {
-
-        h3 {
-            color: $primary;
+            color: $detalles2;
+          }
         }
 
         p {
-            color: $primary;
+          color: $primary;
+        }
+      }
+
+      .repositorios {
+        i,
+        a {
+          color: $primary;
         }
 
-        .tarjeta-skills {
-            color: $primary;
-            background-color: $detalles2;
-
-            span {
-                color: $primary;
-            }
+        .visualizar:hover {
+          background: #d43b11;
         }
+      }
     }
 
-    //Contacto
-    .contacto {
-        i, a {
-            color: $secondary;
-        }
+    .btn-contactame {
+      h3 {
+        color: $primary;
+      }
     }
-    
-    .redes {
-        background-color: $detalles2;
-        
-        .contact-info :is(a, i) {
-            color: $primary;
-        }
+  }
+  //Acerca de y skills
+  .habilidades {
+    h3 {
+      color: $primary;
     }
+
+    p {
+      color: $primary;
+    }
+
+    .tarjeta-skills {
+      color: $primary;
+      background-color: $detalles2;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  //Contacto
+  .contacto {
+    i,
+    a {
+      color: $secondary;
+    }
+  }
+
+  .redes {
+    background-color: $detalles2;
+
+    .contact-info :is(a, i) {
+      color: $primary;
+    }
+  }
 }

@@ -5,8 +5,8 @@
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
 body {
@@ -20,12 +20,12 @@ hr {
 
 @media screen and (min-width: 1024px) {
   hr {
-    border: solid 0.05px #D94A24;
+    border: solid 0.05px #d94a24;
   }
 }
 
 span {
-  color: #D94A24;
+  color: #d94a24;
 }
 
 nav {
@@ -47,7 +47,7 @@ nav {
 }
 
 nav h2 {
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 1.6rem;
 }
 
@@ -67,7 +67,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin: 0 2rem;
   font-size: 1rem;
 }
@@ -121,22 +121,22 @@ nav .links li {
   right: 0;
   width: 30px;
   height: 5px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 50px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu .burger::before, .menu .burger::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 8px;
   width: 30px;
   height: 5px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 50px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu .burger::before {
@@ -241,14 +241,14 @@ nav .links li {
 
 .inicio h1 {
   text-align: center;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 2rem;
 }
 
 .inicio p {
-  color: #F2F2F2;
+  color: #f2f2f2;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .inicio .botones {
@@ -290,7 +290,7 @@ nav .links li {
 }
 
 .inicio .botones a {
-  color: #F2F2F2;
+  color: #f2f2f2;
   text-decoration: none;
 }
 
@@ -311,12 +311,12 @@ nav .links li {
 }
 
 .inicio .botones .contenedor-pro {
-  background-color: #D94A24;
+  background-color: #d94a24;
   margin-bottom: 1.5rem;
 }
 
 .inicio .botones .contenedor-hab {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin-top: 1.5rem;
 }
 
@@ -339,15 +339,16 @@ nav .links li {
 }
 
 .inicio .botones .dark-mode .checkbox:checked + label .ball {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   -webkit-transform: translateX(32px);
           transform: translateX(32px);
 }
 
 .inicio .botones .dark-mode label {
+  cursor: pointer;
   width: 4rem;
   height: 2rem;
-  border: solid #F2F2F2 3px;
+  border: solid #f2f2f2 3px;
   border-radius: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,13 +377,13 @@ nav .links li {
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   top: 1px;
   left: 1.5px;
-  -webkit-transition: -webkit-transform .3s linear;
-  transition: -webkit-transform .3s linear;
-  transition: transform .3s linear;
-  transition: transform .3s linear, -webkit-transform .3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .tag {
@@ -408,12 +409,12 @@ nav .links li {
   font-size: 1.6rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .tag i {
   font-size: 1.5rem;
-  color: #F2F2F2;
+  color: #f2f2f2;
   animation: callToAction 1s infinite alternate-reverse;
 }
 
@@ -471,7 +472,7 @@ nav .links li {
             align-items: center;
   }
   nav .socials li a {
-    margin: .4rem;
+    margin: 0.4rem;
   }
   nav .links {
     display: -webkit-box;
@@ -503,18 +504,18 @@ nav .links li {
     margin-right: 1.2rem;
   }
   nav .links li a::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #F2F2F2;
-    -webkit-transition: width .5s ease;
-    transition: width .5s ease;
+    background-color: #f2f2f2;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
   }
   nav .links li a:hover::before {
-    content: '';
+    content: "";
     width: 100%;
   }
   .inicio {
@@ -579,7 +580,7 @@ nav .links li {
 
 #proyectos .tarjeta img {
   max-width: 90vw;
-  border-bottom: solid 2rem #D94A24;
+  border-bottom: solid 2rem #d94a24;
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: -moz-crisp-edges;
@@ -609,26 +610,26 @@ nav .links li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1em;
 }
 
 #proyectos .tarjeta .info div h3 {
   font-size: 1.8rem;
-  color: #D8D8D8;
+  color: #d8d8d8;
 }
 
 #proyectos .tarjeta .info div h5 {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 500px;
   padding: 3px 1.2rem;
   color: #090909;
 }
 
 #proyectos .tarjeta .info p {
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 1.2rem;
   line-height: 2rem;
   margin-bottom: 3vh;
@@ -636,12 +637,12 @@ nav .links li {
 
 #proyectos .tarjeta .repositorios a {
   margin-top: 2rem;
-  background-color: #D94A24;
+  background-color: #d94a24;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   text-decoration: none;
-  color: #F2F2F2;
-  padding: .8rem 3rem;
+  color: #f2f2f2;
+  padding: 0.8rem 3rem;
   border-radius: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,7 +656,7 @@ nav .links li {
 }
 
 #proyectos .tarjeta .repositorios a i {
-  margin-right: .8rem;
+  margin-right: 0.8rem;
 }
 
 #proyectos .tarjeta .tecnologias {
@@ -698,16 +699,16 @@ nav .links li {
 }
 
 #proyectos .btn-contactame h3 {
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 1.4rem;
 }
 
 #proyectos .btn-contactame a {
   text-decoration: none;
-  background-color: #D94A24;
-  padding: .8rem 3rem;
+  background-color: #d94a24;
+  padding: 0.8rem 3rem;
   border-radius: 500px;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -732,12 +733,13 @@ nav .links li {
     padding-left: 13vw;
     padding-right: 13vw;
   }
-  #proyectos .tarjeta .info, #proyectos .tarjeta img {
+  #proyectos .tarjeta .info,
+  #proyectos .tarjeta img {
     height: 40vh;
   }
   #proyectos .tarjeta img {
     width: 30vw;
-    border-right: solid 2rem #D94A24;
+    border-right: solid 2rem #d94a24;
     border-bottom: none;
   }
   #proyectos .tarjeta .info {
@@ -769,35 +771,35 @@ nav .links li {
             justify-content: space-evenly;
   }
   #proyectos .tarjeta .repositorios a {
-    padding: .4rem 2rem;
+    padding: 0.4rem 2rem;
     font-size: 1rem;
     margin-top: 0;
   }
   #proyectos .tarjeta .repositorios a i {
     font-size: 1.3rem;
-    margin-right: .4rem;
+    margin-right: 0.4rem;
   }
   #proyectos .tarjeta .repositorios .git {
     background-color: transparent;
-    border: solid 2px #D94A24;
+    border: solid 2px #d94a24;
     background-size: 200% 100%;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #D94A24));
-    background-image: linear-gradient(to right, transparent 50%, #D94A24 50%);
-    -webkit-transition: background-position .5s;
-    transition: background-position .5s;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #d94a24));
+    background-image: linear-gradient(to right, transparent 50%, #d94a24 50%);
+    -webkit-transition: background-position 0.5s;
+    transition: background-position 0.5s;
   }
   #proyectos .tarjeta .repositorios .git:hover {
     background-position: -100% 0;
   }
   #proyectos .tarjeta .repositorios .visualizar {
-    -webkit-transition: background .5s ease;
-    transition: background .5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
   }
   #proyectos .tarjeta .repositorios .visualizar:hover {
     background: #d33b11;
   }
   #proyectos .btn-contactame a {
-    padding: .6rem 2rem;
+    padding: 0.6rem 2rem;
     font-size: 1rem;
   }
   #proyectos .open-tag {
@@ -828,12 +830,12 @@ nav .links li {
 
 .habilidades .about img {
   width: 60vw;
-  border-bottom: solid 1rem #D94A24;
+  border-bottom: solid 1rem #d94a24;
   margin-bottom: 1em;
 }
 
 .habilidades .about p {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .habilidades div .tag h2 {
@@ -876,15 +878,15 @@ nav .links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 .habilidades .skills .titulo h3 {
   font-size: 1.6rem;
-  margin-left: .8rem;
-  margin-right: .8rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 .habilidades .skills .titulo i {
@@ -926,7 +928,7 @@ nav .links li {
 }
 
 .habilidades .skills .imagenes div span {
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin-bottom: 2em;
 }
 
@@ -941,7 +943,8 @@ nav .links li {
     padding-left: 13vw;
     padding-right: 13vw;
   }
-  .habilidades .open-tag, .habilidades .tag {
+  .habilidades .open-tag,
+  .habilidades .tag {
     padding-bottom: 0;
   }
   .habilidades .about {
@@ -953,7 +956,7 @@ nav .links li {
   .habilidades .about img {
     width: 18vw;
     border: none;
-    border-left: solid 1.4rem #D94A24;
+    border-left: solid 1.4rem #d94a24;
   }
   .habilidades .about p {
     margin-right: 7rem;
@@ -983,7 +986,7 @@ nav .links li {
     font-size: 1.2rem;
   }
   .habilidades .skills span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1035,17 +1038,18 @@ nav .links li {
   width: 70vw;
 }
 
-.contacto form input, .contacto form textarea {
-  background-color: #D8D8D8;
+.contacto form input,
+.contacto form textarea {
+  background-color: #d8d8d8;
   border: none;
   color: #191919;
 }
 
 .contacto form label {
-  color: #D94A24;
+  color: #d94a24;
   font-size: 1.2rem;
   margin-top: 1.4rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .contacto form input {
@@ -1060,16 +1064,16 @@ nav .links li {
   border-radius: 10px;
   width: 100%;
   outline: none;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
 }
 
 .contacto form a {
   outline: none;
   border: none;
-  color: #F2F2F2;
-  background-color: #D94A24;
+  color: #f2f2f2;
+  background-color: #d94a24;
   font-size: 1.1rem;
-  padding: .6rem 2rem;
+  padding: 0.6rem 2rem;
   border-radius: 500px;
   margin-top: 1.3rem;
   margin-bottom: 3rem;
@@ -1084,7 +1088,7 @@ nav .links li {
 }
 
 .contacto form a i {
-  margin-right: .6rem;
+  margin-right: 0.6rem;
 }
 
 .contacto .redes {
@@ -1108,9 +1112,9 @@ nav .links li {
 
 .contacto .redes a {
   text-decoration: none;
-  color: #F2F2F2;
-  margin-top: .4rem;
-  margin-bottom: .4rem;
+  color: #f2f2f2;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .contacto .redes .contact-info {
@@ -1139,15 +1143,15 @@ nav .links li {
 }
 
 .contacto .redes .cv {
-  background-color: #D94A24;
-  padding: .8rem 2.2rem;
+  background-color: #d94a24;
+  padding: 0.8rem 2.2rem;
   border-radius: 500px;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .contacto .redes .cv i {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .contacto .redes .up {
@@ -1169,8 +1173,9 @@ nav .links li {
   cursor: pointer;
 }
 
-.contacto .redes .up i, .contacto .redes .up p {
-  color: #D94A24;
+.contacto .redes .up i,
+.contacto .redes .up p {
+  color: #d94a24;
 }
 
 .contacto .redes .up i {
@@ -1192,7 +1197,8 @@ nav .links li {
             justify-content: space-between;
     position: relative;
   }
-  .contacto form input, .contacto form textarea {
+  .contacto form input,
+  .contacto form textarea {
     width: 80%;
   }
   .contacto form a {
@@ -1204,9 +1210,9 @@ nav .links li {
     margin-bottom: 0;
   }
   .contacto .redes .cv {
-    padding-top: .4rem;
-    padding-bottom: .4rem;
-    font-size: .8rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 0.8rem;
     cursor: pointer;
   }
   .contacto .final-tag {
@@ -1221,18 +1227,23 @@ nav .links li {
 }
 
 body.light-mode {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 body.light-mode nav {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
-body.light-mode nav ul li a:hover, body.light-mode nav ul li i:hover {
+body.light-mode nav ul li a:hover,
+body.light-mode nav ul li i:hover {
   color: #5a5a5a;
 }
 
-body.light-mode h1, body.light-mode h2, body.light-mode p, body.light-mode a, body.light-mode i {
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode p,
+body.light-mode a,
+body.light-mode i {
   color: #191919;
 }
 
@@ -1249,7 +1260,7 @@ body.light-mode .menu.open .burger {
 }
 
 body.light-mode .links {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 body.light-mode .links a::before {
@@ -1257,7 +1268,7 @@ body.light-mode .links a::before {
 }
 
 body.light-mode #buttons {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 body.light-mode #buttons .contenedor-hab {
@@ -1265,12 +1276,12 @@ body.light-mode #buttons .contenedor-hab {
 }
 
 body.light-mode #buttons .contenedor-hab a {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 body.light-mode #buttons label {
   border-color: #191919;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 body.light-mode #buttons label .ball {
@@ -1287,14 +1298,15 @@ body.light-mode #proyectos .tarjeta .info div h3 {
 
 body.light-mode #proyectos .tarjeta .info div h5 {
   background-color: #191919;
-  color: #D8D8D8;
+  color: #d8d8d8;
 }
 
 body.light-mode #proyectos .tarjeta .info p {
   color: #191919;
 }
 
-body.light-mode #proyectos .tarjeta .repositorios i, body.light-mode #proyectos .tarjeta .repositorios a {
+body.light-mode #proyectos .tarjeta .repositorios i,
+body.light-mode #proyectos .tarjeta .repositorios a {
   color: #191919;
 }
 
@@ -1316,19 +1328,20 @@ body.light-mode .habilidades p {
 
 body.light-mode .habilidades .tarjeta-skills {
   color: #191919;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 body.light-mode .habilidades .tarjeta-skills span {
   color: #191919;
 }
 
-body.light-mode .contacto i, body.light-mode .contacto a {
-  color: #F2F2F2;
+body.light-mode .contacto i,
+body.light-mode .contacto a {
+  color: #f2f2f2;
 }
 
 body.light-mode .redes {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 body.light-mode .redes .contact-info :is(a, i) {
