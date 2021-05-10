@@ -1181,6 +1181,29 @@ nav .links li {
 
 .contacto .redes .up i {
   font-size: 2.6rem;
+  animation: jump 1s infinite ease alternate-reverse forwards;
+}
+
+@-webkit-keyframes jump {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes jump {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
 }
 
 @media screen and (min-width: 1024px) {

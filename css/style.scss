@@ -945,8 +945,18 @@ nav {
 
       i {
         font-size: 2.6rem;
+        animation: jump 1s infinite ease alternate-reverse forwards;
       }
     }
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
   }
 }
 
