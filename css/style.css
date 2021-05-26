@@ -581,11 +581,7 @@ nav .links li {
 #proyectos .tarjeta img {
   max-width: 90vw;
   border-bottom: solid 2rem #d94a24;
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-pixelated;
-      image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 #proyectos .tarjeta .info {

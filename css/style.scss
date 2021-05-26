@@ -462,6 +462,7 @@ nav {
     img {
       max-width: 90vw;
       border-bottom: solid 2rem $acento;
+      image-rendering: -webkit-optimize-contrast;
     }
 
     .info {
