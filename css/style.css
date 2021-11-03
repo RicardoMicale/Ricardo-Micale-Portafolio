@@ -1139,12 +1139,28 @@ nav .links li {
   margin-right: 1.2rem;
 }
 
+.contacto .redes .downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .contacto .redes .cv {
   background-color: #d94a24;
   padding: 0.8rem 2.2rem;
   border-radius: 500px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contacto .redes .cv i {
@@ -1230,10 +1246,12 @@ nav .links li {
     margin-bottom: 0;
   }
   .contacto .redes .cv {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 0.8rem;
     cursor: pointer;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
   }
   .contacto .final-tag {
     position: absolute;
