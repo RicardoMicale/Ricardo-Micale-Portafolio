@@ -1,0 +1,172 @@
+{
+  "en": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "home": {
+      "title": "Full Stack Developer",
+      "description": "I build modern, scalable web applications with clean code and great user experiences. Passionate about turning ideas into reality through technology.",
+      "primaryCallToAction": "View Projects",
+      "secondaryCallToAction": "Get in touch"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I am a Full Stack Developer passionate about building web applications. I enjoy working across the entire stack, from crafting responsive user interfaces to designing robust back-end systems. I am also keen on working with data science and artificial intelligence.",
+      "skills": {
+        "frontend": {
+          "title": "Frontend",
+          "list": [
+            { "name": "HTML", "icon": "🌐" },
+            { "name": "CSS", "icon": "🎨" },
+            { "name": "JavaScript", "icon": "⚡" },
+            { "name": "React", "icon": "⚛️" },
+            { "name": "Vue.js", "icon": "💚" }
+          ]
+        },
+        "backend": {
+          "title": "Backend",
+          "list": [
+            { "name": "Node.js", "icon": "🟢" },
+            { "name": "Python", "icon": "🐍" },
+            { "name": "Express", "icon": "🚀" },
+            { "name": "PostgreSQL", "icon": "🐘" },
+            { "name": "MongoDB", "icon": "🍃" }
+          ]
+        },
+        "tools": {
+          "title": "Tools & DevOps",
+          "list": [
+            { "name": "Git", "icon": "🔀" },
+            { "name": "VS Code", "icon": "💙" },
+            { "name": "Figma", "icon": "🖌️" }
+          ]
+        }
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "list": [
+        {
+          "title": "Flux",
+          "description": "A full-stack web app to track university career path progress and engage in discussions with other students. Built with Vue.js and Firebase.",
+          "technologies": ["Vue.js", "Firebase"],
+          "githubLink": "https://github.com/RicardoMicale/Flux",
+          "projectLink": "https://fluxunimet.web.app/",
+          "image": ""
+        },
+        {
+          "title": "Simpl Programming Language",
+          "description": "A simple programming language interpreter made with Go, with the ability to run functions, if statements and for loops.",
+          "technologies": ["Go"],
+          "githubLink": "https://github.com/RicardoMicale/Simpl",
+          "projectLink": "#",
+          "image": ""
+        },
+        {
+          "title": "InfoMovies",
+          "description": "A movie database web app to search and view movie information, with the ability to create a user and add to watch list. Made with Vue.js and Firebase, using the TMDB API.",
+          "technologies": ["Vue.js", "Firebase"],
+          "githubLink": "https://github.com/RicardoMicale/Movie-app",
+          "projectLink": "https://infomovies-285f1.web.app/",
+          "image": ""
+        }
+      ]
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "description": "I'm currently open to new opportunities. Whether you have a project in mind or just want to say hi, feel free to reach out!",
+      "email": "ricardomicale@gmail.com",
+      "phone": "+58 414-2120549",
+      "linkedin": "https://www.linkedin.com/in/ricardo-micale-delfino-130800215/",
+      "github": "https://github.com/ricardomicale"
+    }
+  },
+  "es": {
+    "menu": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "home": {
+      "title": "Desarrollador Full Stack",
+      "description": "Construyo aplicaciones web modernas y escalables con código limpio y excelentes experiencias de usuario. Apasionado por convertir ideas en realidad a través de la tecnología.",
+      "primaryCallToAction": "Ver Proyectos",
+      "secondaryCallToAction": "Contáctame"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "Soy un Desarrollador Full Stack apasionado por la creación de aplicaciones web. Disfruto trabajando en todas las capas de un proyecto, desde el desarrollo de interfaces responsivas hasta el diseño de sistemas back-end robustos. Además, me interesa profundizar en los campos de la ciencia de datos y la inteligencia artificial.",
+      "skills": {
+        "frontend": {
+          "title": "Frontend",
+          "list": [
+            { "name": "HTML", "icon": "🌐" },
+            { "name": "CSS", "icon": "🎨" },
+            { "name": "JavaScript", "icon": "⚡" },
+            { "name": "React", "icon": "⚛️" },
+            { "name": "Vue.js", "icon": "💚" }
+          ]
+        },
+        "backend": {
+          "title": "Backend",
+          "list": [
+            { "name": "Node.js", "icon": "🟢" },
+            { "name": "Python", "icon": "🐍" },
+            { "name": "Express", "icon": "🚀" },
+            { "name": "PostgreSQL", "icon": "🐘" },
+            { "name": "MongoDB", "icon": "🍃" }
+          ]
+        },
+        "tools": {
+          "title": "Herramientas y DevOps",
+          "list": [
+            { "name": "Git", "icon": "🔀" },
+            { "name": "VS Code", "icon": "💙" },
+            { "name": "Figma", "icon": "🖌️" }
+          ]
+        }
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "list": [
+        {
+          "title": "Flux",
+          "description": "Una aplicación web full-stack para realizar un seguimiento del progreso de la carrera universitaria y participar en discusiones con otros estudiantes. Construida con Vue.js y Firebase.",
+          "technologies": ["Vue.js", "Firebase"],
+          "githubLink": "https://github.com/RicardoMicale/Flux",
+          "projectLink": "https://fluxunimet.web.app/",
+          "image": ""
+        },
+        {
+          "title": "Simpl Programming Language",
+          "description": "Un intérprete de un lenguaje de programación sencillo hecho con Go, con la capacidad de ejecutar funciones, sentencias if y bucles for.",
+          "technologies": ["Go"],
+          "githubLink": "https://github.com/RicardoMicale/Simpl",
+          "projectLink": "#",
+          "image": ""
+        },
+        {
+          "title": "InfoMovies",
+          "description": "Una aplicación web de base de datos de películas para buscar y ver información de filmes, con la capacidad de crear un usuario y añadir a una lista de seguimiento. Realizada con Vue.js y Firebase, utilizando la API de TMDB.",
+          "technologies": ["Vue.js", "Firebase"],
+          "githubLink": "https://github.com/RicardoMicale/Movie-app",
+          "projectLink": "https://infomovies-285f1.web.app/",
+          "image": ""
+        }
+      ]
+    },
+    "contact": {
+      "title": "Ponte en Contacto",
+      "description": "Actualmente estoy abierto a nuevas oportunidades. Ya sea que tengas un proyecto en mente o simplemente quieras saludar, ¡no dudes en escribirme!",
+      "email": "ricardomicale@gmail.com",
+      "phone": "+58 414-2120549",
+      "linkedin": "https://www.linkedin.com/in/ricardo-micale-delfino-130800215/",
+      "github": "https://github.com/ricardomicale"
+    }
+  }
+}
