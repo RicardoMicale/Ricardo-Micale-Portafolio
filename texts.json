@@ -14,16 +14,16 @@
     },
     "about": {
       "title": "About Me",
-      "description": "I am a Full Stack Developer passionate about building web applications. I enjoy working across the entire stack, from crafting responsive user interfaces to designing robust back-end systems. I am also keen on working with data science and artificial intelligence.",
+      "description": "Full stack software developer with over 4 years of experience in frontend and backend development, proficient in different technologies. Experienced in building and deploying mobile applications, web applications, APIs, and database-driven systems, including integration with Bluetooth (BLE) devices. Strong background in UI/UX design, full stack development and data science tools. Skilled in agile teamwork, problem solving, and delivering scalable software solutions.",
       "skills": {
         "frontend": {
           "title": "Frontend",
           "list": [
-            { "name": "HTML", "icon": "🌐" },
-            { "name": "CSS", "icon": "🎨" },
-            { "name": "JavaScript", "icon": "⚡" },
-            { "name": "React", "icon": "⚛️" },
-            { "name": "Vue.js", "icon": "💚" }
+            { "name": "React.js", "icon": "⚛️" },
+            { "name": "Next.js", "icon": "🌐" },
+            { "name": "TypeScript", "icon": "⚡" },
+            { "name": "JavaScript", "icon": "💛" },
+            { "name": "TailwindCSS", "icon": "🎨" }
           ]
         },
         "backend": {
@@ -31,17 +31,19 @@
           "list": [
             { "name": "Node.js", "icon": "🟢" },
             { "name": "Python", "icon": "🐍" },
-            { "name": "Express", "icon": "🚀" },
-            { "name": "PostgreSQL", "icon": "🐘" },
+            { "name": "Golang", "icon": "🐹" },
+            { "name": "GraphQL", "icon": "🚀" },
             { "name": "MongoDB", "icon": "🍃" }
           ]
         },
         "tools": {
-          "title": "Tools & DevOps",
+          "title": "Mobile & Tools",
           "list": [
+            { "name": "SwiftUI", "icon": "🍎" },
+            { "name": "UIKit", "icon": "📱" },
+            { "name": "Figma", "icon": "🖌️" },
             { "name": "Git", "icon": "🔀" },
-            { "name": "VS Code", "icon": "💙" },
-            { "name": "Figma", "icon": "🖌️" }
+            { "name": "Agile", "icon": "👥" }
           ]
         }
       }
@@ -51,7 +53,7 @@
       "list": [
         {
           "title": "Flux",
-          "description": "A full-stack web app to track university career path progress and engage in discussions with other students. Built with Vue.js and Firebase.",
+          "description": "A full-stack web application designed to track university career path progress and facilitate discussions with other students. Features user authentication, real-time database syncing, and a responsive frontend interface.",
           "technologies": ["Vue.js", "Firebase"],
           "githubLink": "https://github.com/RicardoMicale/Flux",
           "projectLink": "https://fluxunimet.web.app/",
@@ -59,7 +61,7 @@
         },
         {
           "title": "Simpl Programming Language",
-          "description": "A simple programming language interpreter made with Go, with the ability to run functions, if statements and for loops.",
+          "description": "A custom programming language interpreter designed and developed in Go. Supports function execution, conditional statements, and iterative loops with efficient tokenizing and parsing.",
           "technologies": ["Go"],
           "githubLink": "https://github.com/RicardoMicale/Simpl",
           "projectLink": "#",
@@ -67,7 +69,7 @@
         },
         {
           "title": "InfoMovies",
-          "description": "A movie database web app to search and view movie information, with the ability to create a user and add to watch list. Made with Vue.js and Firebase, using the TMDB API.",
+          "description": "A movie information platform featuring a watchlist creation system. Integrated with the TMDB external API, using Firebase for user state persistence and Vue.js for a dynamic, reactive user interface.",
           "technologies": ["Vue.js", "Firebase"],
           "githubLink": "https://github.com/RicardoMicale/Movie-app",
           "projectLink": "https://infomovies-285f1.web.app/",
@@ -77,6 +79,7 @@
     },
     "contact": {
       "title": "Get In Touch",
+      "subtitle": "Let's build something great together.",
       "description": "I'm currently open to new opportunities. Whether you have a project in mind or just want to say hi, feel free to reach out!",
       "email": "ricardomicale@gmail.com",
       "phone": "+58 414-2120549",
@@ -99,16 +102,16 @@
     },
     "about": {
       "title": "Sobre mí",
-      "description": "Soy un Desarrollador Full Stack apasionado por la creación de aplicaciones web. Disfruto trabajando en todas las capas de un proyecto, desde el desarrollo de interfaces responsivas hasta el diseño de sistemas back-end robustos. Además, me interesa profundizar en los campos de la ciencia de datos y la inteligencia artificial.",
+      "description": "Desarrollador de software full stack con más de 4 años de experiencia en desarrollo frontend y backend, con dominio de diferentes tecnologías. Experimentado en la construcción y despliegue de aplicaciones móviles, aplicaciones web, APIs y sistemas orientados a bases de datos, incluyendo la integración con dispositivos Bluetooth (BLE). Sólida trayectoria en diseño de UI/UX, desarrollo de pila completa (full stack) y herramientas de ciencia de datos. Capacidad para el trabajo en equipo bajo metodologías ágiles, resolución de problemas y entrega de soluciones de software escalables.",
       "skills": {
         "frontend": {
           "title": "Frontend",
           "list": [
-            { "name": "HTML", "icon": "🌐" },
-            { "name": "CSS", "icon": "🎨" },
-            { "name": "JavaScript", "icon": "⚡" },
-            { "name": "React", "icon": "⚛️" },
-            { "name": "Vue.js", "icon": "💚" }
+            { "name": "React.js", "icon": "⚛️" },
+            { "name": "Next.js", "icon": "🌐" },
+            { "name": "TypeScript", "icon": "⚡" },
+            { "name": "JavaScript", "icon": "💛" },
+            { "name": "TailwindCSS", "icon": "🎨" }
           ]
         },
         "backend": {
@@ -116,17 +119,19 @@
           "list": [
             { "name": "Node.js", "icon": "🟢" },
             { "name": "Python", "icon": "🐍" },
-            { "name": "Express", "icon": "🚀" },
-            { "name": "PostgreSQL", "icon": "🐘" },
+            { "name": "Golang", "icon": "🐹" },
+            { "name": "GraphQL", "icon": "🚀" },
             { "name": "MongoDB", "icon": "🍃" }
           ]
         },
         "tools": {
-          "title": "Herramientas y DevOps",
+          "title": "Móvil y Herramientas",
           "list": [
+            { "name": "SwiftUI", "icon": "🍎" },
+            { "name": "UIKit", "icon": "📱" },
+            { "name": "Figma", "icon": "🖌️" },
             { "name": "Git", "icon": "🔀" },
-            { "name": "VS Code", "icon": "💙" },
-            { "name": "Figma", "icon": "🖌️" }
+            { "name": "Ágil", "icon": "👥" }
           ]
         }
       }
@@ -136,7 +141,7 @@
       "list": [
         {
           "title": "Flux",
-          "description": "Una aplicación web full-stack para realizar un seguimiento del progreso de la carrera universitaria y participar en discusiones con otros estudiantes. Construida con Vue.js y Firebase.",
+          "description": "Una aplicación web de pila completa diseñada para realizar el seguimiento del progreso de carreras universitarias y facilitar debates entre estudiantes. Cuenta con autenticación de usuarios, sincronización de base de datos en tiempo real e interfaz responsiva.",
           "technologies": ["Vue.js", "Firebase"],
           "githubLink": "https://github.com/RicardoMicale/Flux",
           "projectLink": "https://fluxunimet.web.app/",
@@ -144,7 +149,7 @@
         },
         {
           "title": "Simpl Programming Language",
-          "description": "Un intérprete de un lenguaje de programación sencillo hecho con Go, con la capacidad de ejecutar funciones, sentencias if y bucles for.",
+          "description": "Un intérprete de lenguaje de programación personalizado diseñado y desarrollado en Go. Soporta la ejecución de funciones, declaraciones condicionales y bucles iterativos con un análisis sintáctico y tokenización eficientes.",
           "technologies": ["Go"],
           "githubLink": "https://github.com/RicardoMicale/Simpl",
           "projectLink": "#",
@@ -152,7 +157,7 @@
         },
         {
           "title": "InfoMovies",
-          "description": "Una aplicación web de base de datos de películas para buscar y ver información de filmes, con la capacidad de crear un usuario y añadir a una lista de seguimiento. Realizada con Vue.js y Firebase, utilizando la API de TMDB.",
+          "description": "Una plataforma de información cinematográfica que cuenta con un sistema de creación de listas de seguimiento. Integrada con la API externa TMDB, utilizando Firebase para la persistencia del estado de usuario y Vue.js para una interfaz de usuario dinámica y reactiva.",
           "technologies": ["Vue.js", "Firebase"],
           "githubLink": "https://github.com/RicardoMicale/Movie-app",
           "projectLink": "https://infomovies-285f1.web.app/",
@@ -162,6 +167,7 @@
     },
     "contact": {
       "title": "Ponte en Contacto",
+      "subtitle": "¡Creemos algo grandioso juntos!",
       "description": "Actualmente estoy abierto a nuevas oportunidades. Ya sea que tengas un proyecto en mente o simplemente quieras saludar, ¡no dudes en escribirme!",
       "email": "ricardomicale@gmail.com",
       "phone": "+58 414-2120549",

@@ -506,9 +506,8 @@ a.secondary:hover {
 /* ─── ABOUT PAGE ───────────────────────────────────────────────── */
 .about-page__content {
   display: grid;
-  grid-template-rows: 1fr 2fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
 }
 
 .about-page__bio {
@@ -517,6 +516,9 @@ a.secondary:hover {
   border-radius: var(--rounded-corners-lg);
   padding: var(--padding-lg);
   transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-page__bio:hover {
@@ -525,17 +527,52 @@ a.secondary:hover {
 
 .about-page__skills {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
+@media (min-width: 600px) {
+  .about-page__skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-page__skills > *:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 993px) {
+  .about-page__content {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3.5rem;
+    align-items: stretch;
+  }
+
+  .about-page__bio {
+    height: 100%;
+  }
+
+  .about-page__skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-page__skills > *:last-child {
+    grid-column: span 2;
+  }
+}
+
 /* ─── SKILL SUMMARY CARD ───────────────────────────────────────── */
+skill-summary-card {
+  display: block;
+  height: 100%;
+}
+
 .skill-summary-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--rounded-corners-lg);
   padding: var(--padding-lg);
   transition: border-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .skill-summary-card:hover {
@@ -594,6 +631,11 @@ a.secondary:hover {
 }
 
 /* ─── PROJECT CARD ─────────────────────────────────────────────── */
+project-card {
+  display: block;
+  height: 100%;
+}
+
 .project-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -605,6 +647,8 @@ a.secondary:hover {
   transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  min-height: 280px;
 }
 
 /* Sheen effect on hover */
@@ -703,16 +747,40 @@ a.secondary:hover {
 }
 
 /* ─── CONTACT PAGE ─────────────────────────────────────────────── */
+.contact-page__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.contact-page__subtitle {
+  font-size: var(--xl-text);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, var(--white) 30%, rgba(212, 175, 55, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.25;
+}
+
 .contact-page__description {
-  margin-bottom: 2.5rem;
-  max-width: 580px;
+  margin-bottom: 0;
+  max-width: 600px;
 }
 
 .contact-page__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  max-width: 660px;
+}
+
+@media (min-width: 993px) {
+  .contact-page__content {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 5rem;
+    align-items: center;
+  }
 }
 
 .contact-card {
@@ -746,6 +814,7 @@ a.secondary:hover {
 .contact-card__label {
   font-size: var(--small-text);
   font-weight: 500;
+  word-break: break-all;
 }
 
 /* ─── RESPONSIVE OVERRIDES ─────────────────────────────────────── */
@@ -754,19 +823,6 @@ a.secondary:hover {
 @media (max-width: 1024px) {
   .projects-page__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Tablet (Portrait) */
-@media (max-width: 992px) {
-  .about-page__skills {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 992px) and (min-width: 769px) {
-  .about-page__skills > *:last-child {
-    grid-column: span 2;
   }
 }
 
@@ -821,11 +877,6 @@ a.secondary:hover {
   .projects-page__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .about-page__skills {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .about-page__content {
