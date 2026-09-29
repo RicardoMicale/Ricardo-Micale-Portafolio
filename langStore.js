@@ -5,7 +5,8 @@
  */
 
 const LangStore = (() => {
-  let _lang = localStorage.getItem('portfolio-lang') || 'en';
+  let _lang = 'en';
+  try { _lang = localStorage.getItem('portfolio-lang') || 'en'; } catch (_) { /* storage unavailable */ }
   let _texts = null;
   const _subscribers = new Set();
 
@@ -30,7 +31,7 @@ const LangStore = (() => {
 
   function setLang(lang) {
     _lang = lang;
-    localStorage.setItem('portfolio-lang', lang);
+    try { localStorage.setItem('portfolio-lang', lang); } catch (_) { /* storage unavailable */ }
     _subscribers.forEach((cb) => cb(lang));
   }
 

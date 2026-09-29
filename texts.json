@@ -52,6 +52,14 @@
       "title": "Projects",
       "list": [
         {
+          "title": "AceAnalytics",
+          "description": "A full-stack platform for tennis coaches and academies. Matches are tracked live, point by point, with a real-time scoreboard and serve stats, then broken down into visual reports on winners, errors and break points. Coaches can follow each player's progress across matches and spot what to work on next.",
+          "technologies": ["Next.js", "Neon Database"],
+          "githubLink": "https://github.com/RicardoMicale/AceAnalytics",
+          "projectLink": "https://frontend-three-omega-81.vercel.app/",
+          "image": ""
+        },
+        {
           "title": "Flux",
           "description": "A full-stack web application designed to track university career path progress and facilitate discussions with other students. Features user authentication, real-time database syncing, and a responsive frontend interface.",
           "technologies": ["Vue.js", "Firebase"],
@@ -65,14 +73,6 @@
           "technologies": ["Go"],
           "githubLink": "https://github.com/RicardoMicale/Simpl",
           "projectLink": "#",
-          "image": ""
-        },
-        {
-          "title": "InfoMovies",
-          "description": "A movie information platform featuring a watchlist creation system. Integrated with the TMDB external API, using Firebase for user state persistence and Vue.js for a dynamic, reactive user interface.",
-          "technologies": ["Vue.js", "Firebase"],
-          "githubLink": "https://github.com/RicardoMicale/Movie-app",
-          "projectLink": "https://infomovies-285f1.web.app/",
           "image": ""
         }
       ]
@@ -140,6 +140,14 @@
       "title": "Proyectos",
       "list": [
         {
+          "title": "AceAnalytics",
+          "description": "Una plataforma full stack para entrenadores y academias de tenis. Los partidos se registran en vivo, punto por punto, con marcador en tiempo real y estadísticas de saque, y luego se analizan en reportes visuales de winners, errores y break points. Los entrenadores pueden seguir el progreso de cada jugador a lo largo de sus partidos e identificar qué trabajar a continuación.",
+          "technologies": ["Next.js", "Neon Database"],
+          "githubLink": "https://github.com/RicardoMicale/AceAnalytics",
+          "projectLink": "https://frontend-three-omega-81.vercel.app/",
+          "image": ""
+        },
+        {
           "title": "Flux",
           "description": "Una aplicación web de pila completa diseñada para realizar el seguimiento del progreso de carreras universitarias y facilitar debates entre estudiantes. Cuenta con autenticación de usuarios, sincronización de base de datos en tiempo real e interfaz responsiva.",
           "technologies": ["Vue.js", "Firebase"],
@@ -153,14 +161,6 @@
           "technologies": ["Go"],
           "githubLink": "https://github.com/RicardoMicale/Simpl",
           "projectLink": "#",
-          "image": ""
-        },
-        {
-          "title": "InfoMovies",
-          "description": "Una plataforma de información cinematográfica que cuenta con un sistema de creación de listas de seguimiento. Integrada con la API externa TMDB, utilizando Firebase para la persistencia del estado de usuario y Vue.js para una interfaz de usuario dinámica y reactiva.",
-          "technologies": ["Vue.js", "Firebase"],
-          "githubLink": "https://github.com/RicardoMicale/Movie-app",
-          "projectLink": "https://infomovies-285f1.web.app/",
           "image": ""
         }
       ]

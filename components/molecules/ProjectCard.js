@@ -11,8 +11,8 @@ class ProjectCard extends HTMLElement {
     const projectLink = this.getAttribute('project-link') || '#';
 
     this.innerHTML = /* html */ `
-      <article class="project-card">
-        <div class="project-card__header">
+      <article class="project-card retro-window">
+        <div class="project-card__header window-bar">
           <div class="project-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline>
@@ -34,9 +34,11 @@ class ProjectCard extends HTMLElement {
             </a>`}
           </div>
         </div>
-        <h3 class="project-card__title">${title}</h3>
-        <p class="project-card__description">${description}</p>
-        <project-skills technologies='${technologies}'></project-skills>
+        <div class="project-card__body window-body">
+          <h3 class="project-card__title">${title}</h3>
+          <p class="project-card__description">${description}</p>
+          <project-skills technologies='${technologies}'></project-skills>
+        </div>
       </article>
     `;
   }
