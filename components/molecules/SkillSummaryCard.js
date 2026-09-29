@@ -17,9 +17,11 @@ class SkillSummaryCard extends HTMLElement {
     const skills = JSON.parse(this.getAttribute('skills') || '[]');
 
     this.innerHTML = /* html */ `
-      <div class="skill-summary-card">
-        <h3 class="skill-summary-card__title">${title}</h3>
-        <div class="skill-summary-card__list">
+      <div class="skill-summary-card retro-window">
+        <div class="window-bar">
+          <h3 class="skill-summary-card__title window-bar__title">${title}</h3>
+        </div>
+        <div class="skill-summary-card__list window-body">
           ${skills.map(s => `<skill-item name="${s.name}" icon="${s.icon}"></skill-item>`).join('')}
         </div>
       </div>

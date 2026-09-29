@@ -21,6 +21,7 @@ class AboutPage extends HTMLElement {
   render() {
     const t = LangStore.getTexts('about');
     const { frontend, backend, tools } = t.skills;
+    const fileName = `${t.title.toLowerCase().replace(/\s+/g, '_')}.txt`;
 
     this.innerHTML = /* html */ `
       <div class="about-page">
@@ -29,8 +30,13 @@ class AboutPage extends HTMLElement {
           <div class="section-divider"></div>
         </div>
         <div class="about-page__content">
-          <div class="about-page__bio" data-reveal>
-            <p class="paragraph">${t.description}</p>
+          <div class="about-page__bio retro-window" data-reveal>
+            <div class="window-bar" aria-hidden="true">
+              <span class="window-bar__title">${fileName}</span>
+            </div>
+            <div class="window-body">
+              <p class="paragraph">${t.description}</p>
+            </div>
           </div>
           <div class="about-page__skills">
             <skill-summary-card data-reveal
